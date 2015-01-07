@@ -64,9 +64,15 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner.crfsuiteutil">estnltk.estner.crfsuiteutil module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner.featureextraction">estnltk.estner.featureextraction module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner.ner">estnltk.estner.ner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner.crfsuiteutil">estnltk.estner.crfsuiteutil module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner.featureextraction">estnltk.estner.featureextraction module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner.ner">estnltk.estner.ner module</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#estnltk-estner-nlputil-module">estnltk.estner.nlputil module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner.settings">estnltk.estner.settings module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="estnltk.estner.html#module-estnltk.estner">Module contents</a></li>
@@ -89,6 +95,44 @@ Allows to process results sentence by sentence.</p>
 <p>Wrapper class around Java-based clause segmenter (Osalausestaja). 
 Allows to process results sentence by sentence.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Shorthand way of using TextProcessors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.clausesegmenter.ClauseSegmenter.annotate_indices" title="estnltk.clausesegmenter.ClauseSegmenter.annotate_indices"><code class="xref py py-obj docutils literal"><span class="pre">annotate_indices</span></code></a>(sentence)</td>
+<td>Add clause indexes to already annotated sentence.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.clausesegmenter.ClauseSegmenter.detect_annotations" title="estnltk.clausesegmenter.ClauseSegmenter.detect_annotations"><code class="xref py py-obj docutils literal"><span class="pre">detect_annotations</span></code></a>(sentence)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.clausesegmenter.ClauseSegmenter.mark_annotations" title="estnltk.clausesegmenter.ClauseSegmenter.mark_annotations"><code class="xref py py-obj docutils literal"><span class="pre">mark_annotations</span></code></a>(sentence)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.clausesegmenter.ClauseSegmenter.prepare_sentence" title="estnltk.clausesegmenter.ClauseSegmenter.prepare_sentence"><code class="xref py py-obj docutils literal"><span class="pre">prepare_sentence</span></code></a>(sentence)</td>
+<td>Prepare the sentence for segment detection.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">process</span></code>(corpus[,&nbsp;inplace])</td>
+<td>Process the corpus.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.clausesegmenter.ClauseSegmenter.process_corpus" title="estnltk.clausesegmenter.ClauseSegmenter.process_corpus"><code class="xref py py-obj docutils literal"><span class="pre">process_corpus</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.clausesegmenter.ClauseSegmenter.process_json" title="estnltk.clausesegmenter.ClauseSegmenter.process_json"><code class="xref py py-obj docutils literal"><span class="pre">process_json</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">process_line</span></code>(line)</td>
+<td>Process a line of data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.clausesegmenter.ClauseSegmenter.rename_annotations" title="estnltk.clausesegmenter.ClauseSegmenter.rename_annotations"><code class="xref py py-obj docutils literal"><span class="pre">rename_annotations</span></code></a>(sentence)</td>
+<td>Function that renames and restructures clause information.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.clausesegmenter.ClauseSegmenter.annotate_indices">
 <code class="descname">annotate_indices</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/clausesegmenter.html#ClauseSegmenter.annotate_indices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.clausesegmenter.ClauseSegmenter.annotate_indices" title="Permalink to this definition">¶</a></dt>
@@ -156,17 +200,17 @@ Defines common functionality for all modules.</p>
 </table>
 <dl class="attribute">
 <dt id="estnltk.core.JsonPaths.analysis">
-<code class="descname">analysis</code><em class="property"> = &lt;jsonpath_rw.jsonpath.Descendants object at 0x2b9286fe8f60&gt;</em><a class="headerlink" href="#estnltk.core.JsonPaths.analysis" title="Permalink to this definition">¶</a></dt>
+<code class="descname">analysis</code><em class="property"> = &lt;jsonpath_rw.jsonpath.Descendants object at 0x2b4e54e628d0&gt;</em><a class="headerlink" href="#estnltk.core.JsonPaths.analysis" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="estnltk.core.JsonPaths.documents">
-<code class="descname">documents</code><em class="property"> = &lt;jsonpath_rw.jsonpath.Descendants object at 0x2b9287399828&gt;</em><a class="headerlink" href="#estnltk.core.JsonPaths.documents" title="Permalink to this definition">¶</a></dt>
+<code class="descname">documents</code><em class="property"> = &lt;jsonpath_rw.jsonpath.Descendants object at 0x2b4e54ac67f0&gt;</em><a class="headerlink" href="#estnltk.core.JsonPaths.documents" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="estnltk.core.JsonPaths.words">
-<code class="descname">words</code><em class="property"> = &lt;jsonpath_rw.jsonpath.Descendants object at 0x2b928738eef0&gt;</em><a class="headerlink" href="#estnltk.core.JsonPaths.words" title="Permalink to this definition">¶</a></dt>
+<code class="descname">words</code><em class="property"> = &lt;jsonpath_rw.jsonpath.Descendants object at 0x2b4e54eff470&gt;</em><a class="headerlink" href="#estnltk.core.JsonPaths.words" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -224,6 +268,38 @@ Defines common functionality for all modules.</p>
 <em class="property">class </em><code class="descclassname">estnltk.corpus.</code><code class="descname">Clause</code><span class="sig-paren">(</span><em>sentence</em>, <em>indices</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#Clause"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Clause" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.corpus.SparseSentenceElement" title="estnltk.corpus.SparseSentenceElement"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.SparseSentenceElement</span></code></a></p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Clause.clause_index" title="estnltk.corpus.Clause.clause_index"><code class="xref py py-obj docutils literal"><span class="pre">clause_index</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">text_groups</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_group_spans</span></code></td>
+<td>Return list of consequent index spans.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_groups</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_indices</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.corpus.Clause.clause_index">
 <code class="descname">clause_index</code><a class="headerlink" href="#estnltk.corpus.Clause.clause_index" title="Permalink to this definition">¶</a></dt>
@@ -272,6 +348,53 @@ The word indices define a range [word_start, word_end)</p>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.ConsequentSentenceElement.assert_valid" title="estnltk.corpus.ConsequentSentenceElement.assert_valid"><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code>()</td>
+<td>Cast the necessary attributes to correct types.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.ConsequentSentenceElement.assert_valid">
 <code class="descname">assert_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#ConsequentSentenceElement.assert_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.ConsequentSentenceElement.assert_valid" title="Permalink to this definition">¶</a></dt>
@@ -371,7 +494,128 @@ the words of a named entity in the sentence.</p>
 <em class="property">class </em><code class="descclassname">estnltk.corpus.</code><code class="descname">Corpus</code><a class="reference internal" href="_modules/estnltk/corpus.html#Corpus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Corpus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.clause_annotations" title="estnltk.corpus.Corpus.clause_annotations"><code class="xref py py-obj docutils literal"><span class="pre">clause_annotations</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.clause_indices" title="estnltk.corpus.Corpus.clause_indices"><code class="xref py py-obj docutils literal"><span class="pre">clause_indices</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.clauses" title="estnltk.corpus.Corpus.clauses"><code class="xref py py-obj docutils literal"><span class="pre">clauses</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.clitics" title="estnltk.corpus.Corpus.clitics"><code class="xref py py-obj docutils literal"><span class="pre">clitics</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.document_texts" title="estnltk.corpus.Corpus.document_texts"><code class="xref py py-obj docutils literal"><span class="pre">document_texts</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.documents" title="estnltk.corpus.Corpus.documents"><code class="xref py py-obj docutils literal"><span class="pre">documents</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.endings" title="estnltk.corpus.Corpus.endings"><code class="xref py py-obj docutils literal"><span class="pre">endings</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.forms" title="estnltk.corpus.Corpus.forms"><code class="xref py py-obj docutils literal"><span class="pre">forms</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.labels" title="estnltk.corpus.Corpus.labels"><code class="xref py py-obj docutils literal"><span class="pre">labels</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.lemmas" title="estnltk.corpus.Corpus.lemmas"><code class="xref py py-obj docutils literal"><span class="pre">lemmas</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.named_entities" title="estnltk.corpus.Corpus.named_entities"><code class="xref py py-obj docutils literal"><span class="pre">named_entities</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.paragraph_rel_spans" title="estnltk.corpus.Corpus.paragraph_rel_spans"><code class="xref py py-obj docutils literal"><span class="pre">paragraph_rel_spans</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.paragraph_spans" title="estnltk.corpus.Corpus.paragraph_spans"><code class="xref py py-obj docutils literal"><span class="pre">paragraph_spans</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.paragraph_texts" title="estnltk.corpus.Corpus.paragraph_texts"><code class="xref py py-obj docutils literal"><span class="pre">paragraph_texts</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.paragraphs" title="estnltk.corpus.Corpus.paragraphs"><code class="xref py py-obj docutils literal"><span class="pre">paragraphs</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.postags" title="estnltk.corpus.Corpus.postags"><code class="xref py py-obj docutils literal"><span class="pre">postags</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.root_elements" title="estnltk.corpus.Corpus.root_elements"><code class="xref py py-obj docutils literal"><span class="pre">root_elements</span></code></a></td>
+<td>Root elements do not have meaningful hierarchial relationship between them in a corpus.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.root_tokens" title="estnltk.corpus.Corpus.root_tokens"><code class="xref py py-obj docutils literal"><span class="pre">root_tokens</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.roots" title="estnltk.corpus.Corpus.roots"><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.sentence_rel_spans" title="estnltk.corpus.Corpus.sentence_rel_spans"><code class="xref py py-obj docutils literal"><span class="pre">sentence_rel_spans</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.sentence_spans" title="estnltk.corpus.Corpus.sentence_spans"><code class="xref py py-obj docutils literal"><span class="pre">sentence_spans</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.sentence_texts" title="estnltk.corpus.Corpus.sentence_texts"><code class="xref py py-obj docutils literal"><span class="pre">sentence_texts</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.sentences" title="estnltk.corpus.Corpus.sentences"><code class="xref py py-obj docutils literal"><span class="pre">sentences</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.timexes" title="estnltk.corpus.Corpus.timexes"><code class="xref py py-obj docutils literal"><span class="pre">timexes</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.verb_chains" title="estnltk.corpus.Corpus.verb_chains"><code class="xref py py-obj docutils literal"><span class="pre">verb_chains</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.word_rel_spans" title="estnltk.corpus.Corpus.word_rel_spans"><code class="xref py py-obj docutils literal"><span class="pre">word_rel_spans</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.word_spans" title="estnltk.corpus.Corpus.word_spans"><code class="xref py py-obj docutils literal"><span class="pre">word_spans</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.word_texts" title="estnltk.corpus.Corpus.word_texts"><code class="xref py py-obj docutils literal"><span class="pre">word_texts</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.words" title="estnltk.corpus.Corpus.words"><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.apply" title="estnltk.corpus.Corpus.apply"><code class="xref py py-obj docutils literal"><span class="pre">apply</span></code></a>(processor,&nbsp;**kwargs)</td>
+<td>Apply a textprocessor.TextProcessor instance on this corpus.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.construct" title="estnltk.corpus.Corpus.construct"><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code></a>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.elements" title="estnltk.corpus.Corpus.elements"><code class="xref py py-obj docutils literal"><span class="pre">elements</span></code></a>(what)</td>
+<td>Return the specified corpus elements.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.from_json" title="estnltk.corpus.Corpus.from_json"><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code></a>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Corpus.texts" title="estnltk.corpus.Corpus.texts"><code class="xref py py-obj docutils literal"><span class="pre">texts</span></code></a>(what)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Corpus.to_json" title="estnltk.corpus.Corpus.to_json"><code class="xref py py-obj docutils literal"><span class="pre">to_json</span></code></a>()</td>
+<td>Convert the corpus to JSON-style data.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.Corpus.apply">
 <code class="descname">apply</code><span class="sig-paren">(</span><em>processor</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#Corpus.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Corpus.apply" title="Permalink to this definition">¶</a></dt>
@@ -575,7 +819,161 @@ END = REL_END     = len(TEXT)</p>
 <em class="property">class </em><code class="descclassname">estnltk.corpus.</code><code class="descname">Dictionary</code><a class="reference internal" href="_modules/estnltk/corpus.html#Dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Dictionary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code>, <a class="reference internal" href="#estnltk.corpus.Corpus" title="estnltk.corpus.Corpus"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.Corpus</span></code></a></p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_annotations</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_indices</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clauses</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clitics</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">documents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">endings</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">forms</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">labels</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">lemmas</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">named_entities</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraphs</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">postags</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Dictionary.root_elements" title="estnltk.corpus.Dictionary.root_elements"><code class="xref py py-obj docutils literal"><span class="pre">root_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">root_tokens</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentences</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">timexes</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">verb_chains</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">apply</span></code>(processor,&nbsp;**kwargs)</td>
+<td>Apply a textprocessor.TextProcessor instance on this corpus.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Dictionary.elements" title="estnltk.corpus.Dictionary.elements"><code class="xref py py-obj docutils literal"><span class="pre">elements</span></code></a>(what)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">texts</span></code>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">to_json</span></code>()</td>
+<td>Convert the corpus to JSON-style data.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.Dictionary.elements">
 <code class="descname">elements</code><span class="sig-paren">(</span><em>what</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#Dictionary.elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Dictionary.elements" title="Permalink to this definition">¶</a></dt>
@@ -596,7 +994,188 @@ END = REL_END     = len(TEXT)</p>
 <p>A document must have consistent indices throughout its structure.
 All absoulte indices and text splices must match top-level texts.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_annotations</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_indices</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clauses</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clitics</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">documents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">endings</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">forms</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">labels</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">lemmas</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">named_entities</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraphs</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">postags</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">root_elements</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">root_tokens</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentences</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">timexes</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">verb_chains</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">apply</span></code>(processor,&nbsp;**kwargs)</td>
+<td>Apply a textprocessor.TextProcessor instance on this corpus.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code>()</td>
+<td>Perform assertions to ensure sanity checks on the attribute values.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Document.elements" title="estnltk.corpus.Document.elements"><code class="xref py py-obj docutils literal"><span class="pre">elements</span></code></a>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Document.force_cast" title="estnltk.corpus.Document.force_cast"><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">texts</span></code>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">to_json</span></code>()</td>
+<td>Convert the corpus to JSON-style data.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.Document.elements">
 <code class="descname">elements</code><span class="sig-paren">(</span><em>what</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#Document.elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Document.elements" title="Permalink to this definition">¶</a></dt>
@@ -616,7 +1195,83 @@ All absoulte indices and text splices must match top-level texts.</p>
 <p>Element is a basic composition object of Estnltk corpora.
 It must have TEXT, START, END, REL_START and REL_END attributes.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.end" title="estnltk.corpus.ElementMixin.end"><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.rel_end" title="estnltk.corpus.ElementMixin.rel_end"><code class="xref py py-obj docutils literal"><span class="pre">rel_end</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.rel_span" title="estnltk.corpus.ElementMixin.rel_span"><code class="xref py py-obj docutils literal"><span class="pre">rel_span</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.rel_start" title="estnltk.corpus.ElementMixin.rel_start"><code class="xref py py-obj docutils literal"><span class="pre">rel_start</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.span" title="estnltk.corpus.ElementMixin.span"><code class="xref py py-obj docutils literal"><span class="pre">span</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.start" title="estnltk.corpus.ElementMixin.start"><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.text" title="estnltk.corpus.ElementMixin.text"><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.assert_valid" title="estnltk.corpus.ElementMixin.assert_valid"><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code></a>()</td>
+<td>Perform assertions to ensure sanity checks on the attribute values.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.ElementMixin.force_cast" title="estnltk.corpus.ElementMixin.force_cast"><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code></a>()</td>
+<td>Cast the necessary attributes to correct types.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.ElementMixin.assert_valid">
 <code class="descname">assert_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#ElementMixin.assert_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.ElementMixin.assert_valid" title="Permalink to this definition">¶</a></dt>
@@ -672,7 +1327,161 @@ attribute values.</p>
 <em class="property">class </em><code class="descclassname">estnltk.corpus.</code><code class="descname">List</code><a class="reference internal" href="_modules/estnltk/corpus.html#List"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.List" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">list</span></code>, <a class="reference internal" href="#estnltk.corpus.Corpus" title="estnltk.corpus.Corpus"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.Corpus</span></code></a></p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_annotations</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_indices</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clauses</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clitics</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">documents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">endings</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">forms</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">labels</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">lemmas</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">named_entities</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraphs</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">postags</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.List.root_elements" title="estnltk.corpus.List.root_elements"><code class="xref py py-obj docutils literal"><span class="pre">root_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">root_tokens</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentences</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">timexes</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">verb_chains</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">append</span></code>((object)&nbsp;-&gt;&nbsp;None&nbsp;&#8211;&nbsp;append&nbsp;object&nbsp;to&nbsp;end)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">apply</span></code>(processor,&nbsp;**kwargs)</td>
+<td>Apply a textprocessor.TextProcessor instance on this corpus.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None&nbsp;&#8211;&nbsp;remove&nbsp;all&nbsp;items&nbsp;from&nbsp;L)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;list&nbsp;&#8211;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;L)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">count</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.List.elements" title="estnltk.corpus.List.elements"><code class="xref py py-obj docutils literal"><span class="pre">elements</span></code></a>(what)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">extend</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">index</span></code>((value,&nbsp;[start,&nbsp;...)</td>
+<td>Raises ValueError if the value is not present.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></td>
+<td>L.insert(index, object) &#8211; insert object before index</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>(...)</td>
+<td>Raises IndexError if list is empty or index is out of range.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code>(...)</td>
+<td>Raises ValueError if the value is not present.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">reverse</span></code></td>
+<td>L.reverse() &#8211; reverse <em>IN PLACE</em></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sort</span></code>((key=None[,&nbsp;reverse])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">texts</span></code>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">to_json</span></code>()</td>
+<td>Convert the corpus to JSON-style data.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.List.elements">
 <code class="descname">elements</code><span class="sig-paren">(</span><em>what</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#List.elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.List.elements" title="Permalink to this definition">¶</a></dt>
@@ -715,7 +1524,152 @@ entity ends.</p>
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.NamedEntity.label" title="estnltk.corpus.NamedEntity.label"><code class="xref py py-obj docutils literal"><span class="pre">label</span></code></a></td>
+<td>The labels of named entity words have either prefixes <strong>B-</strong> or <strong>I-</strong>, denoting <em>beginning</em> and <em>inside</em> respectively.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.NamedEntity.lemma" title="estnltk.corpus.NamedEntity.lemma"><code class="xref py py-obj docutils literal"><span class="pre">lemma</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_end</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_indices</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_span</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_start</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.NamedEntity.assert_valid" title="estnltk.corpus.NamedEntity.assert_valid"><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code>()</td>
+<td>Cast the necessary attributes to correct types.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.NamedEntity.assert_valid">
 <code class="descname">assert_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#NamedEntity.assert_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.NamedEntity.assert_valid" title="Permalink to this definition">¶</a></dt>
@@ -767,7 +1721,188 @@ retrieved using this property.</p>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.corpus.ElementMixin" title="estnltk.corpus.ElementMixin"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.ElementMixin</span></code></a>, <a class="reference internal" href="#estnltk.corpus.Dictionary" title="estnltk.corpus.Dictionary"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.Dictionary</span></code></a></p>
 <p>Paragraph object.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_annotations</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_indices</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clauses</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clitics</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">documents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">endings</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">forms</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">labels</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">lemmas</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">named_entities</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraphs</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">postags</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">root_elements</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">root_tokens</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentences</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">timexes</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">verb_chains</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">apply</span></code>(processor,&nbsp;**kwargs)</td>
+<td>Apply a textprocessor.TextProcessor instance on this corpus.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Paragraph.assert_valid" title="estnltk.corpus.Paragraph.assert_valid"><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Paragraph.elements" title="estnltk.corpus.Paragraph.elements"><code class="xref py py-obj docutils literal"><span class="pre">elements</span></code></a>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Paragraph.force_cast" title="estnltk.corpus.Paragraph.force_cast"><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">texts</span></code>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">to_json</span></code>()</td>
+<td>Convert the corpus to JSON-style data.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.Paragraph.assert_valid">
 <code class="descname">assert_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#Paragraph.assert_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Paragraph.assert_valid" title="Permalink to this definition">¶</a></dt>
@@ -792,7 +1927,194 @@ retrieved using this property.</p>
 <p>Sentence element of Estnltk corpora.</p>
 <p>Sentence uses WORDS attribute to list its words.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_annotations</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_indices</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Sentence.clauses" title="estnltk.corpus.Sentence.clauses"><code class="xref py py-obj docutils literal"><span class="pre">clauses</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clitics</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">documents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">endings</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">forms</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">labels</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">lemmas</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Sentence.named_entities" title="estnltk.corpus.Sentence.named_entities"><code class="xref py py-obj docutils literal"><span class="pre">named_entities</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraphs</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">postags</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">root_elements</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">root_tokens</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentences</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Sentence.timexes" title="estnltk.corpus.Sentence.timexes"><code class="xref py py-obj docutils literal"><span class="pre">timexes</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Sentence.verb_chains" title="estnltk.corpus.Sentence.verb_chains"><code class="xref py py-obj docutils literal"><span class="pre">verb_chains</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">apply</span></code>(processor,&nbsp;**kwargs)</td>
+<td>Apply a textprocessor.TextProcessor instance on this corpus.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Sentence.assert_consequent_words" title="estnltk.corpus.Sentence.assert_consequent_words"><code class="xref py py-obj docutils literal"><span class="pre">assert_consequent_words</span></code></a>()</td>
+<td>Check the START and END positions of consequent words.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Sentence.assert_valid" title="estnltk.corpus.Sentence.assert_valid"><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Sentence.assert_word_splices" title="estnltk.corpus.Sentence.assert_word_splices"><code class="xref py py-obj docutils literal"><span class="pre">assert_word_splices</span></code></a>()</td>
+<td>Check that the word texts match the sentence texts.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Sentence.elements" title="estnltk.corpus.Sentence.elements"><code class="xref py py-obj docutils literal"><span class="pre">elements</span></code></a>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Sentence.force_cast" title="estnltk.corpus.Sentence.force_cast"><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">texts</span></code>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">to_json</span></code>()</td>
+<td>Convert the corpus to JSON-style data.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.corpus.Sentence.assert_consequent_words">
 <code class="descname">assert_consequent_words</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#Sentence.assert_consequent_words"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.Sentence.assert_consequent_words" title="Permalink to this definition">¶</a></dt>
@@ -850,6 +2172,35 @@ retrieved using this property.</p>
 more than a single word and there can be gaps between the indices.
 SparseSentenceElement class contains common functinality for these elements.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.SparseSentenceElement.sentence" title="estnltk.corpus.SparseSentenceElement.sentence"><code class="xref py py-obj docutils literal"><span class="pre">sentence</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.SparseSentenceElement.text" title="estnltk.corpus.SparseSentenceElement.text"><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.SparseSentenceElement.text_groups" title="estnltk.corpus.SparseSentenceElement.text_groups"><code class="xref py py-obj docutils literal"><span class="pre">text_groups</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.SparseSentenceElement.word_group_spans" title="estnltk.corpus.SparseSentenceElement.word_group_spans"><code class="xref py py-obj docutils literal"><span class="pre">word_group_spans</span></code></a></td>
+<td>Return list of consequent index spans.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.SparseSentenceElement.word_groups" title="estnltk.corpus.SparseSentenceElement.word_groups"><code class="xref py py-obj docutils literal"><span class="pre">word_groups</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.SparseSentenceElement.word_indices" title="estnltk.corpus.SparseSentenceElement.word_indices"><code class="xref py py-obj docutils literal"><span class="pre">word_indices</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.SparseSentenceElement.words" title="estnltk.corpus.SparseSentenceElement.words"><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.corpus.SparseSentenceElement.sentence">
 <code class="descname">sentence</code><a class="headerlink" href="#estnltk.corpus.SparseSentenceElement.sentence" title="Permalink to this definition">¶</a></dt>
@@ -895,7 +2246,248 @@ SparseSentenceElement class contains common functinality for these elements.</p>
 <p>Temporal Expressions Tagger identifies temporal expression phrases in text and
 normalizes these expressions in a format similar to TimeML&#8217;s TIMEX3.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Timex.anchor_id" title="estnltk.corpus.Timex.anchor_id"><code class="xref py py-obj docutils literal"><span class="pre">anchor_id</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Timex.begin_point" title="estnltk.corpus.Timex.begin_point"><code class="xref py py-obj docutils literal"><span class="pre">begin_point</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Timex.end_point" title="estnltk.corpus.Timex.end_point"><code class="xref py py-obj docutils literal"><span class="pre">end_point</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Timex.freq" title="estnltk.corpus.Timex.freq"><code class="xref py py-obj docutils literal"><span class="pre">freq</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Timex.id" title="estnltk.corpus.Timex.id"><code class="xref py py-obj docutils literal"><span class="pre">id</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Timex.mod" title="estnltk.corpus.Timex.mod"><code class="xref py py-obj docutils literal"><span class="pre">mod</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Timex.quant" title="estnltk.corpus.Timex.quant"><code class="xref py py-obj docutils literal"><span class="pre">quant</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Timex.temporal_function" title="estnltk.corpus.Timex.temporal_function"><code class="xref py py-obj docutils literal"><span class="pre">temporal_function</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Timex.type" title="estnltk.corpus.Timex.type"><code class="xref py py-obj docutils literal"><span class="pre">type</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Timex.value" title="estnltk.corpus.Timex.value"><code class="xref py py-obj docutils literal"><span class="pre">value</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_end</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_indices</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_span</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_start</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Timex.assert_valid" title="estnltk.corpus.Timex.assert_valid"><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code>()</td>
+<td>Cast the necessary attributes to correct types.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.corpus.Timex.anchor_id">
 <code class="descname">anchor_id</code><a class="headerlink" href="#estnltk.corpus.Timex.anchor_id" title="Permalink to this definition">¶</a></dt>
@@ -1088,6 +2680,68 @@ half of the month&#8221;):  FIRST_HALF, SECOND_HALF;</p>
 <em class="property">class </em><code class="descclassname">estnltk.corpus.</code><code class="descname">VerbChain</code><span class="sig-paren">(</span><em>sentence</em>, <em>indices</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/corpus.html#VerbChain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.corpus.VerbChain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.corpus.SparseSentenceElement" title="estnltk.corpus.SparseSentenceElement"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.SparseSentenceElement</span></code></a></p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.analysis_ids" title="estnltk.corpus.VerbChain.analysis_ids"><code class="xref py py-obj docutils literal"><span class="pre">analysis_ids</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.clause_index" title="estnltk.corpus.VerbChain.clause_index"><code class="xref py py-obj docutils literal"><span class="pre">clause_index</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.data" title="estnltk.corpus.VerbChain.data"><code class="xref py py-obj docutils literal"><span class="pre">data</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.lemma" title="estnltk.corpus.VerbChain.lemma"><code class="xref py py-obj docutils literal"><span class="pre">lemma</span></code></a></td>
+<td>Verb chain lemma.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.morph" title="estnltk.corpus.VerbChain.morph"><code class="xref py py-obj docutils literal"><span class="pre">morph</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.other_verbs" title="estnltk.corpus.VerbChain.other_verbs"><code class="xref py py-obj docutils literal"><span class="pre">other_verbs</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.pattern" title="estnltk.corpus.VerbChain.pattern"><code class="xref py py-obj docutils literal"><span class="pre">pattern</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.pattern_tokens" title="estnltk.corpus.VerbChain.pattern_tokens"><code class="xref py py-obj docutils literal"><span class="pre">pattern_tokens</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.polarity" title="estnltk.corpus.VerbChain.polarity"><code class="xref py py-obj docutils literal"><span class="pre">polarity</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.roots" title="estnltk.corpus.VerbChain.roots"><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">text_groups</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_group_spans</span></code></td>
+<td>Return list of consequent index spans.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_groups</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.word_indices" title="estnltk.corpus.VerbChain.word_indices"><code class="xref py py-obj docutils literal"><span class="pre">word_indices</span></code></a></td>
+<td>Consequent word indices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.VerbChain.word_indices_chain" title="estnltk.corpus.VerbChain.word_indices_chain"><code class="xref py py-obj docutils literal"><span class="pre">word_indices_chain</span></code></a></td>
+<td>The real order of word indices making up a chain.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.corpus.VerbChain.analysis_ids">
 <code class="descname">analysis_ids</code><a class="headerlink" href="#estnltk.corpus.VerbChain.analysis_ids" title="Permalink to this definition">¶</a></dt>
@@ -1163,7 +2817,229 @@ starting from morphological analysis results to named entity
 labels.</p>
 <p>This is one of the central elements of the Estnltk corpora.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.analysis" title="estnltk.corpus.Word.analysis"><code class="xref py py-obj docutils literal"><span class="pre">analysis</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.clause_annotation" title="estnltk.corpus.Word.clause_annotation"><code class="xref py py-obj docutils literal"><span class="pre">clause_annotation</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_annotations</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.clause_index" title="estnltk.corpus.Word.clause_index"><code class="xref py py-obj docutils literal"><span class="pre">clause_index</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clause_indices</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clauses</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.clitic" title="estnltk.corpus.Word.clitic"><code class="xref py py-obj docutils literal"><span class="pre">clitic</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.clitics" title="estnltk.corpus.Word.clitics"><code class="xref py py-obj docutils literal"><span class="pre">clitics</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">document_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">documents</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.ending" title="estnltk.corpus.Word.ending"><code class="xref py py-obj docutils literal"><span class="pre">ending</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.endings" title="estnltk.corpus.Word.endings"><code class="xref py py-obj docutils literal"><span class="pre">endings</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.form" title="estnltk.corpus.Word.form"><code class="xref py py-obj docutils literal"><span class="pre">form</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.forms" title="estnltk.corpus.Word.forms"><code class="xref py py-obj docutils literal"><span class="pre">forms</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.label" title="estnltk.corpus.Word.label"><code class="xref py py-obj docutils literal"><span class="pre">label</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">labels</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.lemma" title="estnltk.corpus.Word.lemma"><code class="xref py py-obj docutils literal"><span class="pre">lemma</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.lemmas" title="estnltk.corpus.Word.lemmas"><code class="xref py py-obj docutils literal"><span class="pre">lemmas</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">named_entities</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraph_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">paragraphs</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.postag" title="estnltk.corpus.Word.postag"><code class="xref py py-obj docutils literal"><span class="pre">postag</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.postags" title="estnltk.corpus.Word.postags"><code class="xref py py-obj docutils literal"><span class="pre">postags</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_end</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rel_start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.root" title="estnltk.corpus.Word.root"><code class="xref py py-obj docutils literal"><span class="pre">root</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">root_elements</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.root_tokens" title="estnltk.corpus.Word.root_tokens"><code class="xref py py-obj docutils literal"><span class="pre">root_tokens</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.roots" title="estnltk.corpus.Word.roots"><code class="xref py py-obj docutils literal"><span class="pre">roots</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sentence_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sentences</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">span</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">start</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.corpus.Word.timex_data" title="estnltk.corpus.Word.timex_data"><code class="xref py py-obj docutils literal"><span class="pre">timex_data</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">timexes</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">verb_chains</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_rel_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">word_spans</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">word_texts</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">words</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">apply</span></code>(processor,&nbsp;**kwargs)</td>
+<td>Apply a textprocessor.TextProcessor instance on this corpus.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">assert_valid</span></code>()</td>
+<td>Perform assertions to ensure sanity checks on the attribute values.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.corpus.Word.elements" title="estnltk.corpus.Word.elements"><code class="xref py py-obj docutils literal"><span class="pre">elements</span></code></a>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">force_cast</span></code>()</td>
+<td>Cast the necessary attributes to correct types.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code>(data)</td>
+<td>Construct the corpus from JSON-style data.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">texts</span></code>(what)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">to_json</span></code>()</td>
+<td>Convert the corpus to JSON-style data.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.corpus.Word.analysis">
 <code class="descname">analysis</code><a class="headerlink" href="#estnltk.corpus.Word.analysis" title="Permalink to this definition">¶</a></dt>
@@ -1364,6 +3240,17 @@ output also encoded on a single line and flushes it.</p>
 <cite>process_line</cite> method to interact with the process.</p>
 <p>It deals with input/output and errors.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.javaprocess.JavaProcess.process_line" title="estnltk.javaprocess.JavaProcess.process_line"><code class="xref py py-obj docutils literal"><span class="pre">process_line</span></code></a>(line)</td>
+<td>Process a line of data.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.javaprocess.JavaProcess.process_line">
 <code class="descname">process_line</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/javaprocess.html#JavaProcess.process_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.javaprocess.JavaProcess.process_line" title="Permalink to this definition">¶</a></dt>
@@ -1411,6 +3298,29 @@ information to corpora.</p>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.textprocessor.TextProcessor" title="estnltk.textprocessor.TextProcessor"><code class="xref py py-class docutils literal"><span class="pre">estnltk.textprocessor.TextProcessor</span></code></a></p>
 <p>Class using vabamorf library for morphological analysis.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Shorthand way of using TextProcessors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.morf.PyVabamorfAnalyzer.analyze" title="estnltk.morf.PyVabamorfAnalyzer.analyze"><code class="xref py py-obj docutils literal"><span class="pre">analyze</span></code></a>(wordlist,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">process</span></code>(corpus[,&nbsp;inplace])</td>
+<td>Process the corpus.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.morf.PyVabamorfAnalyzer.process_corpus" title="estnltk.morf.PyVabamorfAnalyzer.process_corpus"><code class="xref py py-obj docutils literal"><span class="pre">process_corpus</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.morf.PyVabamorfAnalyzer.process_json" title="estnltk.morf.PyVabamorfAnalyzer.process_json"><code class="xref py py-obj docutils literal"><span class="pre">process_json</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.morf.PyVabamorfAnalyzer.analyze">
 <code class="descname">analyze</code><span class="sig-paren">(</span><em>wordlist</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/morf.html#PyVabamorfAnalyzer.analyze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.morf.PyVabamorfAnalyzer.analyze" title="Permalink to this definition">¶</a></dt>
@@ -1441,6 +3351,23 @@ and in corpora.</p>
 <em class="property">class </em><code class="descclassname">estnltk.ner.</code><code class="descname">ModelStorageUtil</code><span class="sig-paren">(</span><em>model_dir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/ner.html#ModelStorageUtil"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.ner.ModelStorageUtil" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.ner.ModelStorageUtil.copy_settings" title="estnltk.ner.ModelStorageUtil.copy_settings"><code class="xref py py-obj docutils literal"><span class="pre">copy_settings</span></code></a>(settings_module)</td>
+<td>Copy settings module to the model_dir directory</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.ner.ModelStorageUtil.load_settings" title="estnltk.ner.ModelStorageUtil.load_settings"><code class="xref py py-obj docutils literal"><span class="pre">load_settings</span></code></a>()</td>
+<td>Load settings module from the model_dir directory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.ner.ModelStorageUtil.makedir" title="estnltk.ner.ModelStorageUtil.makedir"><code class="xref py py-obj docutils literal"><span class="pre">makedir</span></code></a>()</td>
+<td>Create model_dir directory</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.ner.ModelStorageUtil.copy_settings">
 <code class="descname">copy_settings</code><span class="sig-paren">(</span><em>settings_module</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/ner.html#ModelStorageUtil.copy_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.ner.ModelStorageUtil.copy_settings" title="Permalink to this definition">¶</a></dt>
@@ -1467,6 +3394,26 @@ and in corpora.</p>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.textprocessor.TextProcessor" title="estnltk.textprocessor.TextProcessor"><code class="xref py py-class docutils literal"><span class="pre">estnltk.textprocessor.TextProcessor</span></code></a></p>
 <p>The class for tagging named entities.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Shorthand way of using TextProcessors.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">process</span></code>(corpus[,&nbsp;inplace])</td>
+<td>Process the corpus.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.ner.NerTagger.process_corpus" title="estnltk.ner.NerTagger.process_corpus"><code class="xref py py-obj docutils literal"><span class="pre">process_corpus</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.ner.NerTagger.process_json" title="estnltk.ner.NerTagger.process_json"><code class="xref py py-obj docutils literal"><span class="pre">process_json</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td>Tag the given documents with named entities.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.ner.NerTagger.process_corpus">
 <code class="descname">process_corpus</code><span class="sig-paren">(</span><em>corpus</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/ner.html#NerTagger.process_corpus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.ner.NerTagger.process_corpus" title="Permalink to this definition">¶</a></dt>
@@ -1506,6 +3453,17 @@ tags.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>The class for training NER models. Uses crfsuite implementation.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.ner.NerTrainer.train" title="estnltk.ner.NerTrainer.train"><code class="xref py py-obj docutils literal"><span class="pre">train</span></code></a>(jsondocs,&nbsp;model_dir)</td>
+<td>Train a NER model using given documents.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.ner.NerTrainer.train">
 <code class="descname">train</code><span class="sig-paren">(</span><em>jsondocs</em>, <em>model_dir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/ner.html#NerTrainer.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.ner.NerTrainer.train" title="Permalink to this definition">¶</a></dt>
@@ -1793,6 +3751,26 @@ Extra fields at document level are preserved.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class for comparing texts against a predefined alphabet</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textdiagnostics.TextDiagnostics.compute_report" title="estnltk.textdiagnostics.TextDiagnostics.compute_report"><code class="xref py py-obj docutils literal"><span class="pre">compute_report</span></code></a>(texts[,&nbsp;context_size])</td>
+<td>Compute statistics of invalid characters on given texts.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textdiagnostics.TextDiagnostics.find_invalid_chars" title="estnltk.textdiagnostics.TextDiagnostics.find_invalid_chars"><code class="xref py py-obj docutils literal"><span class="pre">find_invalid_chars</span></code></a>(text[,&nbsp;context_size])</td>
+<td>Find invalid characters in text and store information about the findings.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textdiagnostics.TextDiagnostics.is_valid" title="estnltk.textdiagnostics.TextDiagnostics.is_valid"><code class="xref py py-obj docutils literal"><span class="pre">is_valid</span></code></a>(text)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textdiagnostics.TextDiagnostics.report" title="estnltk.textdiagnostics.TextDiagnostics.report"><code class="xref py py-obj docutils literal"><span class="pre">report</span></code></a>(texts[,&nbsp;n_examples,&nbsp;context_size,&nbsp;f])</td>
+<td>Compute statistics of invalid characters and print them.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textdiagnostics.TextDiagnostics.compute_report">
 <code class="descname">compute_report</code><span class="sig-paren">(</span><em>texts</em>, <em>context_size=10</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textdiagnostics.html#TextDiagnostics.compute_report"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textdiagnostics.TextDiagnostics.compute_report" title="Permalink to this definition">¶</a></dt>
@@ -1890,6 +3868,26 @@ the findings.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Base class for text processors.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Shorthand way of using TextProcessors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textprocessor.TextProcessor.process" title="estnltk.textprocessor.TextProcessor.process"><code class="xref py py-obj docutils literal"><span class="pre">process</span></code></a>(corpus[,&nbsp;inplace])</td>
+<td>Process the corpus.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textprocessor.TextProcessor.process_corpus" title="estnltk.textprocessor.TextProcessor.process_corpus"><code class="xref py py-obj docutils literal"><span class="pre">process_corpus</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textprocessor.TextProcessor.process_json" title="estnltk.textprocessor.TextProcessor.process_json"><code class="xref py py-obj docutils literal"><span class="pre">process_json</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textprocessor.TextProcessor.process">
 <code class="descname">process</code><span class="sig-paren">(</span><em>corpus</em>, <em>inplace=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textprocessor.html#TextProcessor.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textprocessor.TextProcessor.process" title="Permalink to this definition">¶</a></dt>
@@ -1934,6 +3932,41 @@ a copy first when applying modifications.</p>
 <em class="property">class </em><code class="descclassname">estnltk.timex.</code><code class="descname">TimexTagger</code><a class="reference internal" href="_modules/estnltk/timex.html#TimexTagger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.timex.TimexTagger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.javaprocess.JavaProcess" title="estnltk.javaprocess.JavaProcess"><code class="xref py py-class docutils literal"><span class="pre">estnltk.javaprocess.JavaProcess</span></code></a>, <a class="reference internal" href="#estnltk.textprocessor.TextProcessor" title="estnltk.textprocessor.TextProcessor"><code class="xref py py-class docutils literal"><span class="pre">estnltk.textprocessor.TextProcessor</span></code></a></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Shorthand way of using TextProcessors.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">process</span></code>(corpus[,&nbsp;inplace])</td>
+<td>Process the corpus.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.timex.TimexTagger.process_corpus" title="estnltk.timex.TimexTagger.process_corpus"><code class="xref py py-obj docutils literal"><span class="pre">process_corpus</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.timex.TimexTagger.process_json" title="estnltk.timex.TimexTagger.process_json"><code class="xref py py-obj docutils literal"><span class="pre">process_json</span></code></a>(corpus,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">process_line</span></code>(line)</td>
+<td>Process a line of data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.timex.TimexTagger.process_sentences" title="estnltk.timex.TimexTagger.process_sentences"><code class="xref py py-obj docutils literal"><span class="pre">process_sentences</span></code></a>(corpus[,&nbsp;process_json])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.timex.TimexTagger.process_words" title="estnltk.timex.TimexTagger.process_words"><code class="xref py py-obj docutils literal"><span class="pre">process_words</span></code></a>(words,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.timex.TimexTagger.remove_timexes_with_no_value_type" title="estnltk.timex.TimexTagger.remove_timexes_with_no_value_type"><code class="xref py py-obj docutils literal"><span class="pre">remove_timexes_with_no_value_type</span></code></a>(sentence)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.timex.TimexTagger.rename_attributes" title="estnltk.timex.TimexTagger.rename_attributes"><code class="xref py py-obj docutils literal"><span class="pre">rename_attributes</span></code></a>(sentence)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.timex.TimexTagger.process_corpus">
 <code class="descname">process_corpus</code><span class="sig-paren">(</span><em>corpus</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/timex.html#TimexTagger.process_corpus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.timex.TimexTagger.process_corpus" title="Permalink to this definition">¶</a></dt>
@@ -2003,6 +4036,20 @@ for a particular tokenizer.</p>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(text)</td>
+<td>Shorthand function for <a href="#id3"><span class="problematic" id="id4">:method:`estnltk.tokenize.Tokenizer.tokenize`</span></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.tokenize.Tokenizer.tokenize" title="estnltk.tokenize.Tokenizer.tokenize"><code class="xref py py-obj docutils literal"><span class="pre">tokenize</span></code></a>(text)</td>
+<td>Tokenize the text into paragraphs, sentences and words.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.tokenize.Tokenizer.tokenize">
 <code class="descname">tokenize</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/tokenize.html#Tokenizer.tokenize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.tokenize.Tokenizer.tokenize" title="Permalink to this definition">¶</a></dt>
@@ -2082,14 +4129,18 @@ of a larger text. Such as a sentence in a paragraph.</p>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-estnltk.clausesegmenter">estnltk.clausesegmenter module</a></li>
 <li><a class="reference internal" href="#module-estnltk.core">estnltk.core module</a></li>
-<li><a class="reference internal" href="#module-estnltk.corpus">estnltk.corpus module</a></li>
+<li><a class="reference internal" href="#module-estnltk.corpus">estnltk.corpus module</a><ul>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-estnltk.javaprocess">estnltk.javaprocess module</a><ul>
 <li><a class="reference internal" href="#attributes">Attributes</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-estnltk.morf">estnltk.morf module</a></li>
 <li><a class="reference internal" href="#module-estnltk.names">estnltk.names module</a></li>
-<li><a class="reference internal" href="#module-estnltk.ner">estnltk.ner module</a></li>
+<li><a class="reference internal" href="#module-estnltk.ner">estnltk.ner module</a><ul>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-estnltk.teicorpus">estnltk.teicorpus module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textdiagnostics">estnltk.textdiagnostics module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textprocessor">estnltk.textprocessor module</a></li>

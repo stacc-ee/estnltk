@@ -25,7 +25,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="estnltk 1.1 documentation" href="../index.html" />
-    <link rel="next" title="&lt;no title&gt;" href="wordnet.html" />
+    <link rel="next" title="Estonian Wordnet" href="wordnet.html" />
     <link rel="prev" title="Temporal expression (TIMEX) tagging" href="timex.html" /> 
   </head>
   <body role="document">
@@ -36,7 +36,10 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="wordnet.html" title="&lt;no title&gt;"
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="wordnet.html" title="Estonian Wordnet"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="timex.html" title="Temporal expression (TIMEX) tagging"
@@ -68,7 +71,7 @@ The current version of the program aims to detect following verb chain construct
 </li>
 </ul>
 <p>Verb chain detector requires that the input text has been tokenized (split into sentences and words), morphologically analyzed, morphologically disambiguated, and segmented into clauses.
-Recall that the text can be segmented into clauses with <code class="xref py py-class docutils literal"><span class="pre">estnltk.clausesegmenter.ClauseSegmenter</span></code>.</p>
+Recall that the text can be segmented into clauses with <a class="reference internal" href="../estnltk.html#estnltk.clausesegmenter.ClauseSegmenter" title="estnltk.clausesegmenter.ClauseSegmenter"><code class="xref py py-class docutils literal"><span class="pre">estnltk.clausesegmenter.ClauseSegmenter</span></code></a>.</p>
 <p>Example:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">Tokenizer</span>
 <span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">PyVabamorfAnalyzer</span>
@@ -88,7 +91,7 @@ Recall that the text can be segmented into clauses with <code class="xref py py-
 <span class="n">pprint</span><span class="p">(</span><span class="n">processed</span><span class="o">.</span><span class="n">verb_chains</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Property <code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.Corpus.verb_chains</span></code> lists all found <code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.VerbChain</span></code> objects.
+<p>Property <a class="reference internal" href="../estnltk.html#estnltk.corpus.Corpus.verb_chains" title="estnltk.corpus.Corpus.verb_chains"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.Corpus.verb_chains</span></code></a> lists all found <a class="reference internal" href="../estnltk.html#estnltk.corpus.VerbChain" title="estnltk.corpus.VerbChain"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.VerbChain</span></code></a> objects.
 The previous example prints out following found verb chains:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s">&#39;VerbChain(on, ole, ole, POS)&#39;</span><span class="p">,</span>
  <span class="s">&#39;VerbChain(korraldus, verb, korraldu, POS)&#39;</span><span class="p">,</span>
@@ -152,7 +155,7 @@ other verbs:  False
                         title="previous chapter">Temporal expression (TIMEX) tagging</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="wordnet.html"
-                        title="next chapter">&lt;no title&gt;</a></p>
+                        title="next chapter">Estonian Wordnet</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -184,7 +187,10 @@ other verbs:  False
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="wordnet.html" title="&lt;no title&gt;"
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="wordnet.html" title="Estonian Wordnet"
              >next</a> |</li>
         <li class="right" >
           <a href="timex.html" title="Temporal expression (TIMEX) tagging"

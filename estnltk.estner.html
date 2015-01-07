@@ -24,8 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="estnltk 1.1 documentation" href="index.html" />
-    <link rel="prev" title="Subpackages" href="estnltk.textclassifier.html" /> 
+    <link rel="top" title="estnltk 1.1 documentation" href="index.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -37,9 +36,6 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="estnltk.textclassifier.html" title="Subpackages"
-             accesskey="P">previous</a> |</li>
         <li><a href="index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -70,6 +66,17 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class for named entity tagging using a crfsuite model.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.estner.crfsuiteutil.Tagger.tag" title="estnltk.estner.crfsuiteutil.Tagger.tag"><code class="xref py py-obj docutils literal"><span class="pre">tag</span></code></a>(nerdoc)</td>
+<td>Tag the given document.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.crfsuiteutil.Tagger.tag">
 <code class="descname">tag</code><span class="sig-paren">(</span><em>nerdoc</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/crfsuiteutil.html#Tagger.tag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.crfsuiteutil.Tagger.tag" title="Permalink to this definition">¶</a></dt>
@@ -101,6 +108,17 @@ nerdoc: estnltk.estner.Document</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Trains a crfsuite model.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.estner.crfsuiteutil.Trainer.train" title="estnltk.estner.crfsuiteutil.Trainer.train"><code class="xref py py-obj docutils literal"><span class="pre">train</span></code></a>(nerdocs,&nbsp;mode_filename)</td>
+<td>Train a CRF model using given documents.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.crfsuiteutil.Trainer.train">
 <code class="descname">train</code><span class="sig-paren">(</span><em>nerdocs</em>, <em>mode_filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/crfsuiteutil.html#Trainer.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.crfsuiteutil.Trainer.train" title="Permalink to this definition">¶</a></dt>
@@ -136,6 +154,20 @@ features.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Base class for all feature extractors.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.estner.featureextraction.BaseFeatureExtractor.prepare" title="estnltk.estner.featureextraction.BaseFeatureExtractor.prepare"><code class="xref py py-obj docutils literal"><span class="pre">prepare</span></code></a>(docs)</td>
+<td>Called before feature extraction actually happens.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.estner.featureextraction.BaseFeatureExtractor.process" title="estnltk.estner.featureextraction.BaseFeatureExtractor.process"><code class="xref py py-obj docutils literal"><span class="pre">process</span></code></a>(doc)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.featureextraction.BaseFeatureExtractor.prepare">
 <code class="descname">prepare</code><span class="sig-paren">(</span><em>docs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/featureextraction.html#BaseFeatureExtractor.prepare"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.featureextraction.BaseFeatureExtractor.prepare" title="Permalink to this definition">¶</a></dt>
@@ -157,6 +189,20 @@ collect global statistics on the corpus.</p>
 <p>Feature extractor is used for decorating tokens of the documents
 with features specified in configuration files.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.estner.featureextraction.FeatureExtractor.prepare" title="estnltk.estner.featureextraction.FeatureExtractor.prepare"><code class="xref py py-obj docutils literal"><span class="pre">prepare</span></code></a>(docs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.estner.featureextraction.FeatureExtractor.process" title="estnltk.estner.featureextraction.FeatureExtractor.process"><code class="xref py py-obj docutils literal"><span class="pre">process</span></code></a>(docs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.featureextraction.FeatureExtractor.prepare">
 <code class="descname">prepare</code><span class="sig-paren">(</span><em>docs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/featureextraction.html#FeatureExtractor.prepare"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.featureextraction.FeatureExtractor.prepare" title="Permalink to this definition">¶</a></dt>
@@ -181,6 +227,20 @@ compose multi-token phrases for dictionary lookup. When look_ahead=N, phrases
 (t[i], ..., t[i+N]) will be composed. If the phrase matches the dictionary, each
 token will be assigned the corresponding value.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">prepare</span></code>(docs)</td>
+<td>Called before feature extraction actually happens.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.estner.featureextraction.GazetteerFeatureExtractor.process" title="estnltk.estner.featureextraction.GazetteerFeatureExtractor.process"><code class="xref py py-obj docutils literal"><span class="pre">process</span></code></a>(doc)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.featureextraction.GazetteerFeatureExtractor.process">
 <code class="descname">process</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/featureextraction.html#GazetteerFeatureExtractor.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.featureextraction.GazetteerFeatureExtractor.process" title="Permalink to this definition">¶</a></dt>
@@ -193,6 +253,20 @@ token will be assigned the corresponding value.</p>
 <em class="property">class </em><code class="descclassname">estnltk.estner.featureextraction.</code><code class="descname">GlobalContextFeatureExtractor</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/featureextraction.html#GlobalContextFeatureExtractor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.featureextraction.GlobalContextFeatureExtractor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.estner.featureextraction.BaseFeatureExtractor" title="estnltk.estner.featureextraction.BaseFeatureExtractor"><code class="xref py py-class docutils literal"><span class="pre">estnltk.estner.featureextraction.BaseFeatureExtractor</span></code></a></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">prepare</span></code>(docs)</td>
+<td>Called before feature extraction actually happens.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.estner.featureextraction.GlobalContextFeatureExtractor.process" title="estnltk.estner.featureextraction.GlobalContextFeatureExtractor.process"><code class="xref py py-obj docutils literal"><span class="pre">process</span></code></a>(doc)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.featureextraction.GlobalContextFeatureExtractor.process">
 <code class="descname">process</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/featureextraction.html#GlobalContextFeatureExtractor.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.featureextraction.GlobalContextFeatureExtractor.process" title="Permalink to this definition">¶</a></dt>
@@ -206,6 +280,20 @@ token will be assigned the corresponding value.</p>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.estner.featureextraction.BaseFeatureExtractor" title="estnltk.estner.featureextraction.BaseFeatureExtractor"><code class="xref py py-class docutils literal"><span class="pre">estnltk.estner.featureextraction.BaseFeatureExtractor</span></code></a></p>
 <p>Generates features for a token based on its character makeup</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">prepare</span></code>(docs)</td>
+<td>Called before feature extraction actually happens.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">process</span></code>(doc)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="class">
@@ -214,6 +302,20 @@ token will be assigned the corresponding value.</p>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.estner.featureextraction.BaseFeatureExtractor" title="estnltk.estner.featureextraction.BaseFeatureExtractor"><code class="xref py py-class docutils literal"><span class="pre">estnltk.estner.featureextraction.BaseFeatureExtractor</span></code></a></p>
 <p>Extracts features provided by the morphological analyser pyvabamorf.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">prepare</span></code>(docs)</td>
+<td>Called before feature extraction actually happens.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">process</span></code>(doc)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="class">
@@ -222,6 +324,20 @@ token will be assigned the corresponding value.</p>
 <dd><p>Bases: <a class="reference internal" href="#estnltk.estner.featureextraction.BaseFeatureExtractor" title="estnltk.estner.featureextraction.BaseFeatureExtractor"><code class="xref py py-class docutils literal"><span class="pre">estnltk.estner.featureextraction.BaseFeatureExtractor</span></code></a></p>
 <p>Generates features for the first and last tokens in a sentence.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">prepare</span></code>(docs)</td>
+<td>Called before feature extraction actually happens.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.estner.featureextraction.SentenceFeatureExtractor.process" title="estnltk.estner.featureextraction.SentenceFeatureExtractor.process"><code class="xref py py-obj docutils literal"><span class="pre">process</span></code></a>(doc)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.featureextraction.SentenceFeatureExtractor.process">
 <code class="descname">process</code><span class="sig-paren">(</span><em>doc</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/featureextraction.html#SentenceFeatureExtractor.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.featureextraction.SentenceFeatureExtractor.process" title="Permalink to this definition">¶</a></dt>
@@ -372,6 +488,17 @@ the template extracts a feature value.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>A collection of NER documents.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.estner.ner.Collection.tokens" title="estnltk.estner.ner.Collection.tokens"><code class="xref py py-obj docutils literal"><span class="pre">tokens</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.estner.ner.Collection.tokens">
 <code class="descname">tokens</code><a class="headerlink" href="#estnltk.estner.ner.Collection.tokens" title="Permalink to this definition">¶</a></dt>
@@ -392,6 +519,47 @@ the template extracts a feature value.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">list</span></code></p>
 <p>Sentence is a list of NER tokens.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">append</span></code>((object)&nbsp;-&gt;&nbsp;None&nbsp;&#8211;&nbsp;append&nbsp;object&nbsp;to&nbsp;end)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None&nbsp;&#8211;&nbsp;remove&nbsp;all&nbsp;items&nbsp;from&nbsp;L)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;list&nbsp;&#8211;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;L)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">count</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">extend</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">index</span></code>((value,&nbsp;[start,&nbsp;...)</td>
+<td>Raises ValueError if the value is not present.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></td>
+<td>L.insert(index, object) &#8211; insert object before index</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>(...)</td>
+<td>Raises IndexError if list is empty or index is out of range.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code>(...)</td>
+<td>Raises ValueError if the value is not present.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">reverse</span></code></td>
+<td>L.reverse() &#8211; reverse <em>IN PLACE</em></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sort</span></code>((key=None[,&nbsp;reverse])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="class">
@@ -400,6 +568,53 @@ the template extracts a feature value.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
 <p>Token represents a single word in NER system.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.estner.ner.Token.feature_list" title="estnltk.estner.ner.Token.feature_list"><code class="xref py py-obj docutils literal"><span class="pre">feature_list</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.estner.ner.Token.features_to_string" title="estnltk.estner.ner.Token.features_to_string"><code class="xref py py-obj docutils literal"><span class="pre">features_to_string</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.estner.ner.Token.feature_list">
 <code class="descname">feature_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/estner/ner.html#Token.feature_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.estner.ner.Token.feature_list" title="Permalink to this definition">¶</a></dt>
@@ -436,9 +651,15 @@ the template extracts a feature value.</p>
 <li><a class="reference internal" href="#">estnltk.estner package</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-estnltk.estner.crfsuiteutil">estnltk.estner.crfsuiteutil module</a></li>
-<li><a class="reference internal" href="#module-estnltk.estner.featureextraction">estnltk.estner.featureextraction module</a></li>
-<li><a class="reference internal" href="#module-estnltk.estner.ner">estnltk.estner.ner module</a></li>
+<li><a class="reference internal" href="#module-estnltk.estner.crfsuiteutil">estnltk.estner.crfsuiteutil module</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-estnltk.estner.featureextraction">estnltk.estner.featureextraction module</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-estnltk.estner.ner">estnltk.estner.ner module</a><ul>
+</ul>
+</li>
 <li><a class="reference internal" href="#estnltk-estner-nlputil-module">estnltk.estner.nlputil module</a></li>
 <li><a class="reference internal" href="#module-estnltk.estner.settings">estnltk.estner.settings module</a></li>
 <li><a class="reference internal" href="#module-estnltk.estner">Module contents</a></li>
@@ -446,9 +667,6 @@ the template extracts a feature value.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="estnltk.textclassifier.html"
-                        title="previous chapter">Subpackages</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -482,9 +700,6 @@ the template extracts a feature value.</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="estnltk.textclassifier.html" title="Subpackages"
-             >previous</a> |</li>
         <li><a href="index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>

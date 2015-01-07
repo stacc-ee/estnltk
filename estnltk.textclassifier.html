@@ -24,9 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="estnltk 1.1 documentation" href="index.html" />
-    <link rel="next" title="estnltk.estner package" href="estnltk.estner.html" />
-    <link rel="prev" title="estnltk.wordnet package" href="estnltk.wordnet.html" /> 
+    <link rel="top" title="estnltk 1.1 documentation" href="index.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -38,12 +36,6 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="estnltk.estner.html" title="estnltk.estner package"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="estnltk.wordnet.html" title="estnltk.wordnet package"
-             accesskey="P">previous</a> |</li>
         <li><a href="index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -73,6 +65,17 @@
 <p>Analyzer for preprocessing Estonian texts.</p>
 <p>Performs stopword removal, lemmatization and synonym unification</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(sentence)</td>
+<td>Analyze the given sentence.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -129,6 +132,43 @@
 </tbody>
 </table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.classifier.Clf.classify" title="estnltk.textclassifier.classifier.Clf.classify"><code class="xref py py-obj docutils literal"><span class="pre">classify</span></code></a>(dataframe)</td>
+<td>Classify the dataframe.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.classifier.Clf.export_json" title="estnltk.textclassifier.classifier.Clf.export_json"><code class="xref py py-obj docutils literal"><span class="pre">export_json</span></code></a>()</td>
+<td>Export the classifier as a JSON string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.classifier.Clf.from_json" title="estnltk.textclassifier.classifier.Clf.from_json"><code class="xref py py-obj docutils literal"><span class="pre">from_json</span></code></a>(json_data)</td>
+<td>Import previously exported classifier from a JSON string.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get_new_classifier</span></code>()</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.classifier.Clf.retrain" title="estnltk.textclassifier.classifier.Clf.retrain"><code class="xref py py-obj docutils literal"><span class="pre">retrain</span></code></a>(dataframe[,&nbsp;conf_treshold,&nbsp;report])</td>
+<td>Retrain the classifier using extra data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.classifier.Clf.test" title="estnltk.textclassifier.classifier.Clf.test"><code class="xref py py-obj docutils literal"><span class="pre">test</span></code></a>(dataframe)</td>
+<td>Test the classifier using given annotated dataframe.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.classifier.Clf.train" title="estnltk.textclassifier.classifier.Clf.train"><code class="xref py py-obj docutils literal"><span class="pre">train</span></code></a>(dataframe[,&nbsp;report])</td>
+<td>Train the classifier.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.classifier.Clf.classify">
 <code class="descname">classify</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/classifier.html#Clf.classify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.classifier.Clf.classify" title="Permalink to this definition">¶</a></dt>
@@ -380,6 +420,17 @@ bad and good examples.</p>
 <em class="property">class </em><code class="descclassname">estnltk.textclassifier.classify.</code><code class="descname">ClassificationApp</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/classify.html#ClassificationApp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.classify.ClassificationApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.classify.ClassificationApp.run" title="estnltk.textclassifier.classify.ClassificationApp.run"><code class="xref py py-obj docutils literal"><span class="pre">run</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.classify.ClassificationApp.run">
 <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/classify.html#ClassificationApp.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.classify.ClassificationApp.run" title="Permalink to this definition">¶</a></dt>
@@ -397,7 +448,40 @@ bad and good examples.</p>
 <p>Base class for classification tasks.</p>
 <p>Provides funtions to perform basic evaluation of model building,</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.clfbase.ClfBase.cv_stats" title="estnltk.textclassifier.clfbase.ClfBase.cv_stats"><code class="xref py py-obj docutils literal"><span class="pre">cv_stats</span></code></a></td>
+<td>Perform cross-validation for model evaluation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.clfbase.ClfBase.feature_extractor" title="estnltk.textclassifier.clfbase.ClfBase.feature_extractor"><code class="xref py py-obj docutils literal"><span class="pre">feature_extractor</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.clfbase.ClfBase.get_new_classifier" title="estnltk.textclassifier.clfbase.ClfBase.get_new_classifier"><code class="xref py py-obj docutils literal"><span class="pre">get_new_classifier</span></code></a>()</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.textclassifier.clfbase.ClfBase.cv_stats">
 <code class="descname">cv_stats</code><a class="headerlink" href="#estnltk.textclassifier.clfbase.ClfBase.cv_stats" title="Permalink to this definition">¶</a></dt>
@@ -468,6 +552,17 @@ prediction probabilities</p>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.featureextractor.FeatureExtractor.export" title="estnltk.textclassifier.featureextractor.FeatureExtractor.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.textclassifier.featureextractor.FeatureExtractor.X">
 <code class="descname">X</code><a class="headerlink" href="#estnltk.textclassifier.featureextractor.FeatureExtractor.X" title="Permalink to this definition">¶</a></dt>
@@ -589,6 +684,17 @@ prediction probabilities</p>
 <em class="property">class </em><code class="descclassname">estnltk.textclassifier.merge.</code><code class="descname">MergeApp</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/merge.html#MergeApp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.merge.MergeApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.merge.MergeApp.run" title="estnltk.textclassifier.merge.MergeApp.run"><code class="xref py py-obj docutils literal"><span class="pre">run</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.merge.MergeApp.run">
 <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/merge.html#MergeApp.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.merge.MergeApp.run" title="Permalink to this definition">¶</a></dt>
@@ -611,6 +717,23 @@ prediction probabilities</p>
 <p>As we reorder the labels in computations, it is necessary to make sure they are consequent as otherwise
 scikit learn metrics functions complain.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.Renumberer.fit" title="estnltk.textclassifier.reportgenerator.Renumberer.fit"><code class="xref py py-obj docutils literal"><span class="pre">fit</span></code></a>(X[,&nbsp;y])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">fit_transform</span></code>(X[,&nbsp;y])</td>
+<td>Fit to data, then transform it.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.Renumberer.transform" title="estnltk.textclassifier.reportgenerator.Renumberer.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(X)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.reportgenerator.Renumberer.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/reportgenerator.html#Renumberer.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.reportgenerator.Renumberer.fit" title="Permalink to this definition">¶</a></dt>
@@ -631,7 +754,66 @@ scikit learn metrics functions complain.</p>
 <p>Raports containg statistics and evaluation data for estimating the model performance
 and providing clues to improve the performance.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report" title="estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report"><code class="xref py py-obj docutils literal"><span class="pre">classification_report</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.coverage_f1_fig" title="estnltk.textclassifier.reportgenerator.ReportGenerator.coverage_f1_fig"><code class="xref py py-obj docutils literal"><span class="pre">coverage_f1_fig</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.cutoff_f1_fig" title="estnltk.textclassifier.reportgenerator.ReportGenerator.cutoff_f1_fig"><code class="xref py py-obj docutils literal"><span class="pre">cutoff_f1_fig</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.main_report" title="estnltk.textclassifier.reportgenerator.ReportGenerator.main_report"><code class="xref py py-obj docutils literal"><span class="pre">main_report</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.misclassified_data" title="estnltk.textclassifier.reportgenerator.ReportGenerator.misclassified_data"><code class="xref py py-obj docutils literal"><span class="pre">misclassified_data</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.sentence_report" title="estnltk.textclassifier.reportgenerator.ReportGenerator.sentence_report"><code class="xref py py-obj docutils literal"><span class="pre">sentence_report</span></code></a></td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.significant_features" title="estnltk.textclassifier.reportgenerator.ReportGenerator.significant_features"><code class="xref py py-obj docutils literal"><span class="pre">significant_features</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report_list" title="estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report_list"><code class="xref py py-obj docutils literal"><span class="pre">classification_report_list</span></code></a>(title,&nbsp;data)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report_total" title="estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report_total"><code class="xref py py-obj docutils literal"><span class="pre">classification_report_total</span></code></a>(prec,&nbsp;rec,&nbsp;f1)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report">
 <code class="descname">classification_report</code><a class="headerlink" href="#estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report" title="Permalink to this definition">¶</a></dt>
@@ -709,7 +891,59 @@ and providing clues to improve the performance.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
 <p>Dictionary containing report generator data.</p>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.ReportGeneratorData.coverage_curve" title="estnltk.textclassifier.reportgenerator.ReportGeneratorData.coverage_curve"><code class="xref py py-obj docutils literal"><span class="pre">coverage_curve</span></code></a></td>
+<td>Compute coverage statistics.</td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.textclassifier.reportgenerator.ReportGeneratorData.coverage_curve">
 <code class="descname">coverage_curve</code><a class="headerlink" href="#estnltk.textclassifier.reportgenerator.ReportGeneratorData.coverage_curve" title="Permalink to this definition">¶</a></dt>
@@ -741,6 +975,26 @@ Cutoff values</p>
 <em class="property">class </em><code class="descclassname">estnltk.textclassifier.reportgenerator.</code><code class="descname">TextAnnotator</code><span class="sig-paren">(</span><em>unifier</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/reportgenerator.html#TextAnnotator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.reportgenerator.TextAnnotator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.TextAnnotator.annotate_color" title="estnltk.textclassifier.reportgenerator.TextAnnotator.annotate_color"><code class="xref py py-obj docutils literal"><span class="pre">annotate_color</span></code></a>(f,&nbsp;v)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.TextAnnotator.annotate_important_features" title="estnltk.textclassifier.reportgenerator.TextAnnotator.annotate_important_features"><code class="xref py py-obj docutils literal"><span class="pre">annotate_important_features</span></code></a>(text,&nbsp;features)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.TextAnnotator.does_match" title="estnltk.textclassifier.reportgenerator.TextAnnotator.does_match"><code class="xref py py-obj docutils literal"><span class="pre">does_match</span></code></a>(variants,&nbsp;features)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.reportgenerator.TextAnnotator.trim_feature_prefixes" title="estnltk.textclassifier.reportgenerator.TextAnnotator.trim_feature_prefixes"><code class="xref py py-obj docutils literal"><span class="pre">trim_feature_prefixes</span></code></a>(features)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.reportgenerator.TextAnnotator.annotate_color">
 <code class="descname">annotate_color</code><span class="sig-paren">(</span><em>f</em>, <em>v</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/reportgenerator.html#TextAnnotator.annotate_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.reportgenerator.TextAnnotator.annotate_color" title="Permalink to this definition">¶</a></dt>
@@ -772,6 +1026,17 @@ Cutoff values</p>
 <em class="property">class </em><code class="descclassname">estnltk.textclassifier.retrain.</code><code class="descname">ReTrainerApp</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/retrain.html#ReTrainerApp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.retrain.ReTrainerApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.retrain.ReTrainerApp.run" title="estnltk.textclassifier.retrain.ReTrainerApp.run"><code class="xref py py-obj docutils literal"><span class="pre">run</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.retrain.ReTrainerApp.run">
 <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/retrain.html#ReTrainerApp.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.retrain.ReTrainerApp.run" title="Permalink to this definition">¶</a></dt>
@@ -795,7 +1060,74 @@ Cutoff values</p>
 <li>The Problem-pecific synonyms.</li>
 </ol>
 <p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.settings.Settings.confidence" title="estnltk.textclassifier.settings.Settings.confidence"><code class="xref py py-obj docutils literal"><span class="pre">confidence</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.settings.Settings.features" title="estnltk.textclassifier.settings.Settings.features"><code class="xref py py-obj docutils literal"><span class="pre">features</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.settings.Settings.label" title="estnltk.textclassifier.settings.Settings.label"><code class="xref py py-obj docutils literal"><span class="pre">label</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.settings.Settings.unifier" title="estnltk.textclassifier.settings.Settings.unifier"><code class="xref py py-obj docutils literal"><span class="pre">unifier</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.settings.Settings.export" title="estnltk.textclassifier.settings.Settings.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>()</td>
+<td>Export the settings as a Python dictionary.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></td>
+<td>Returns a new dict with keys from iterable and values equal to value.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">get</span></code>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">items</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code>(...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<td>2-tuple; but raise KeyError if D is empty.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.settings.Settings.read" title="estnltk.textclassifier.settings.Settings.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(setfnm[,&nbsp;synfnm])</td>
+<td>Initialize settings from technical synonym and settings files.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">update</span></code>(([E,&nbsp;...)</td>
+<td>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">values</span></code>(...)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.textclassifier.settings.Settings.REQUIRED_KEYS">
 <code class="descname">REQUIRED_KEYS</code><em class="property"> = frozenset({'features', 'label'})</em><a class="headerlink" href="#estnltk.textclassifier.settings.Settings.REQUIRED_KEYS" title="Permalink to this definition">¶</a></dt>
@@ -863,6 +1195,25 @@ Cutoff values</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class to read settings files.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.settings.SettingsFileReader.read" title="estnltk.textclassifier.settings.SettingsFileReader.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>()</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="estnltk.textclassifier.settings.SettingsFileReader.SECTIONS">
 <code class="descname">SECTIONS</code><em class="property"> = ['[features]', '[label]', '[confidence]']</em><a class="headerlink" href="#estnltk.textclassifier.settings.SettingsFileReader.SECTIONS" title="Permalink to this definition">¶</a></dt>
@@ -895,6 +1246,17 @@ Cutoff values</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class to read technical synonym files.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.synunifier.SynFileReader.read" title="estnltk.textclassifier.synunifier.SynFileReader.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.synunifier.SynFileReader.read">
 <code class="descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/synunifier.html#SynFileReader.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.synunifier.SynFileReader.read" title="Permalink to this definition">¶</a></dt>
@@ -908,6 +1270,23 @@ Cutoff values</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class for storing technical synonyms.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.synunifier.SynUnifier.add_synset" title="estnltk.textclassifier.synunifier.SynUnifier.add_synset"><code class="xref py py-obj docutils literal"><span class="pre">add_synset</span></code></a>(synset)</td>
+<td>Add a synset to the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#estnltk.textclassifier.synunifier.SynUnifier.export" title="estnltk.textclassifier.synunifier.SynUnifier.export"><code class="xref py py-obj docutils literal"><span class="pre">export</span></code></a>()</td>
+<td>Export the instance to a JSON-serializable dictionary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.synunifier.SynUnifier.unify" title="estnltk.textclassifier.synunifier.SynUnifier.unify"><code class="xref py py-obj docutils literal"><span class="pre">unify</span></code></a>(word)</td>
+<td>Unify the given word.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.synunifier.SynUnifier.add_synset">
 <code class="descname">add_synset</code><span class="sig-paren">(</span><em>synset</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/synunifier.html#SynUnifier.add_synset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.synunifier.SynUnifier.add_synset" title="Permalink to this definition">¶</a></dt>
@@ -987,6 +1366,17 @@ its main representation.</p>
 <em class="property">class </em><code class="descclassname">estnltk.textclassifier.test.</code><code class="descname">TestingApp</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/test.html#TestingApp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.test.TestingApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.test.TestingApp.run" title="estnltk.textclassifier.test.TestingApp.run"><code class="xref py py-obj docutils literal"><span class="pre">run</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.test.TestingApp.run">
 <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/test.html#TestingApp.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.test.TestingApp.run" title="Permalink to this definition">¶</a></dt>
@@ -1003,6 +1393,17 @@ its main representation.</p>
 <em class="property">class </em><code class="descclassname">estnltk.textclassifier.train.</code><code class="descname">TrainerApp</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/train.html#TrainerApp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.train.TrainerApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#estnltk.textclassifier.train.TrainerApp.run" title="estnltk.textclassifier.train.TrainerApp.run"><code class="xref py py-obj docutils literal"><span class="pre">run</span></code></a>()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="estnltk.textclassifier.train.TrainerApp.run">
 <code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/textclassifier/train.html#TrainerApp.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.textclassifier.train.TrainerApp.run" title="Permalink to this definition">¶</a></dt>
@@ -1199,26 +1600,28 @@ exists the program.</p>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.analyzer">estnltk.textclassifier.analyzer module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.classifier">estnltk.textclassifier.classifier module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.classify">estnltk.textclassifier.classify module</a></li>
-<li><a class="reference internal" href="#module-estnltk.textclassifier.clfbase">estnltk.textclassifier.clfbase module</a></li>
+<li><a class="reference internal" href="#module-estnltk.textclassifier.clfbase">estnltk.textclassifier.clfbase module</a><ul>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.featureextractor">estnltk.textclassifier.featureextractor module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.merge">estnltk.textclassifier.merge module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.paths">estnltk.textclassifier.paths module</a></li>
-<li><a class="reference internal" href="#module-estnltk.textclassifier.reportgenerator">estnltk.textclassifier.reportgenerator module</a></li>
+<li><a class="reference internal" href="#module-estnltk.textclassifier.reportgenerator">estnltk.textclassifier.reportgenerator module</a><ul>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.retrain">estnltk.textclassifier.retrain module</a></li>
-<li><a class="reference internal" href="#module-estnltk.textclassifier.settings">estnltk.textclassifier.settings module</a></li>
-<li><a class="reference internal" href="#module-estnltk.textclassifier.synunifier">estnltk.textclassifier.synunifier module</a></li>
+<li><a class="reference internal" href="#module-estnltk.textclassifier.settings">estnltk.textclassifier.settings module</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-estnltk.textclassifier.synunifier">estnltk.textclassifier.synunifier module</a><ul>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.test">estnltk.textclassifier.test module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.train">estnltk.textclassifier.train module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier.utils">estnltk.textclassifier.utils module</a></li>
 <li><a class="reference internal" href="#module-estnltk.textclassifier">Module contents</a></li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="estnltk.wordnet.html"
-                        title="previous chapter">estnltk.wordnet package</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="estnltk.estner.html"
-                        title="next chapter">estnltk.estner package</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -1252,12 +1655,6 @@ exists the program.</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="estnltk.estner.html" title="estnltk.estner package"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="estnltk.wordnet.html" title="estnltk.wordnet package"
-             >previous</a> |</li>
         <li><a href="index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>

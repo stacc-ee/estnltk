@@ -33,6 +33,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -58,8 +61,8 @@
 </ul>
 </li>
 </ul>
-<p>Verbiahelate tuvastamine nõuab, et sisendtekst on lausestatud ja sõnestatud (klassi <code class="xref py py-class docutils literal"><span class="pre">estnltk.tokenize.Tokenizer</span></code> abil), morfoloogiliselt analüüsitud (klassi <code class="xref py py-class docutils literal"><span class="pre">estnltk.morf.PyVabamorfAnalyzer</span></code> abil), morfoloogiliselt ühestatud ning jagatud osalauseteks.
-Meenutagem, et teksti on võimalik jagada osalauseteks klassi <code class="xref py py-class docutils literal"><span class="pre">estnltk.clausesegmenter.ClauseSegmenter</span></code> abil.</p>
+<p>Verbiahelate tuvastamine nõuab, et sisendtekst on lausestatud ja sõnestatud (klassi <a class="reference internal" href="../estnltk.html#estnltk.tokenize.Tokenizer" title="estnltk.tokenize.Tokenizer"><code class="xref py py-class docutils literal"><span class="pre">estnltk.tokenize.Tokenizer</span></code></a> abil), morfoloogiliselt analüüsitud (klassi <a class="reference internal" href="../estnltk.html#estnltk.morf.PyVabamorfAnalyzer" title="estnltk.morf.PyVabamorfAnalyzer"><code class="xref py py-class docutils literal"><span class="pre">estnltk.morf.PyVabamorfAnalyzer</span></code></a> abil), morfoloogiliselt ühestatud ning jagatud osalauseteks.
+Meenutagem, et teksti on võimalik jagada osalauseteks klassi <a class="reference internal" href="../estnltk.html#estnltk.clausesegmenter.ClauseSegmenter" title="estnltk.clausesegmenter.ClauseSegmenter"><code class="xref py py-class docutils literal"><span class="pre">estnltk.clausesegmenter.ClauseSegmenter</span></code></a> abil.</p>
 <p>Näide:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">Tokenizer</span>
 <span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">PyVabamorfAnalyzer</span>
@@ -79,7 +82,7 @@ Meenutagem, et teksti on võimalik jagada osalauseteks klassi <code class="xref 
 <span class="n">pprint</span><span class="p">(</span><span class="n">processed</span><span class="o">.</span><span class="n">verb_chains</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Väli <code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.Corpus.verb_chains</span></code> annab järjendi kõigist leitud verbiahelatest, mis on esitatud   <code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.VerbChain</span></code> objektide kujul.
+<p>Väli <a class="reference internal" href="../estnltk.html#estnltk.corpus.Corpus.verb_chains" title="estnltk.corpus.Corpus.verb_chains"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.Corpus.verb_chains</span></code></a> annab järjendi kõigist leitud verbiahelatest, mis on esitatud   <a class="reference internal" href="../estnltk.html#estnltk.corpus.VerbChain" title="estnltk.corpus.VerbChain"><code class="xref py py-class docutils literal"><span class="pre">estnltk.corpus.VerbChain</span></code></a> objektide kujul.
 Eelmise koodilõigu käivitamisel väljastatakse järgmised verbiahelad:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s">&#39;VerbChain(on, ole, ole, POS)&#39;</span><span class="p">,</span>
  <span class="s">&#39;VerbChain(korraldus, verb, korraldu, POS)&#39;</span><span class="p">,</span>
@@ -175,6 +178,9 @@ kontekstis on teisi verbe?:  False
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
