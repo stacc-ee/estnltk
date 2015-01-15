@@ -23,12 +23,12 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="estnltk 1.1 documentation" href="../../../index.html" />
     <link rel="up" title="Module code" href="../../index.html" /> 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,7 +45,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <h1>Source code for estnltk.textclassifier.reportgenerator</h1><div class="highlight"><pre>
 <span class="c"># -*- coding: utf-8 -*-</span>
@@ -111,7 +111,7 @@
         <span class="bp">self</span><span class="p">[</span><span class="s">&#39;coef&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">coef</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">coverage_curve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGeneratorData.coverage_curve"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGeneratorData.coverage_curve">[docs]</a>    <span class="k">def</span> <span class="nf">coverage_curve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Compute coverage statistics.</span>
 <span class="sd">        </span>
 <span class="sd">        Returns</span>
@@ -138,7 +138,7 @@
             <span class="n">cutoffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prob</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">coverages</span><span class="p">,</span> <span class="n">f1s</span><span class="p">,</span> <span class="n">cutoffs</span>
 
-        </div>
+        </div></div>
 <div class="viewcode-block" id="TextAnnotator"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.TextAnnotator">[docs]</a><span class="k">class</span> <span class="nc">TextAnnotator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">unifier</span><span class="p">):</span>
@@ -215,7 +215,7 @@
         <span class="k">return</span> <span class="n">html</span> <span class="o">+</span> <span class="s">&#39;&lt;/table&gt;&#39;</span>
     </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">classification_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGenerator.classification_report"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGenerator.classification_report">[docs]</a>    <span class="k">def</span> <span class="nf">classification_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        unicode</span>
@@ -244,15 +244,15 @@
         <span class="n">html</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classification_report_list</span><span class="p">(</span><span class="s">&#39;Ordered by support&#39;</span><span class="p">,</span> <span class="n">data_supp</span><span class="p">)</span>
         
         <span class="k">return</span> <span class="n">html</span>
-
+</div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">coverage_f1_fig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGenerator.coverage_f1_fig"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGenerator.coverage_f1_fig">[docs]</a>    <span class="k">def</span> <span class="nf">coverage_f1_fig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_as_blob</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_plot_curve</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;coverages&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;f1s&#39;</span><span class="p">],</span> <span class="s">&#39;Data coverage&#39;</span><span class="p">,</span> <span class="s">&#39;Accuracy (weighted F1)&#39;</span><span class="p">))</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">cutoff_f1_fig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGenerator.cutoff_f1_fig"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGenerator.cutoff_f1_fig">[docs]</a>    <span class="k">def</span> <span class="nf">cutoff_f1_fig</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_as_blob</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_plot_curve</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;cutoffs&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;f1s&#39;</span><span class="p">],</span> <span class="s">&#39;Confidence cutoff&#39;</span><span class="p">,</span> <span class="s">&#39;Accuracy (weighted F1)&#39;</span><span class="p">))</span>
-
+</div>
     <span class="k">def</span> <span class="nf">_plot_curve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">):</span>
         <span class="n">ticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="o">/</span><span class="mf">100.0</span>
         <span class="n">ticklabels</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;{0:.0f}%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">ticks</span><span class="p">]</span>
@@ -282,7 +282,7 @@
         <span class="k">return</span> <span class="n">blob</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;ascii&#39;</span><span class="p">)</span>
     
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sentence_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGenerator.sentence_report"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGenerator.sentence_report">[docs]</a>    <span class="k">def</span> <span class="nf">sentence_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        unicode</span>
@@ -309,9 +309,9 @@
                         <span class="n">html</span> <span class="o">+=</span> <span class="s">&#39;&lt;tr&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">htmlescape</span><span class="p">(</span><span class="n">sent</span><span class="p">))</span>
                     <span class="n">html</span> <span class="o">+=</span> <span class="s">&#39;&lt;/table&gt;&#39;</span>
         <span class="k">return</span> <span class="n">html</span>
-
+</div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">significant_features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGenerator.significant_features"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGenerator.significant_features">[docs]</a>    <span class="k">def</span> <span class="nf">significant_features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">settings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;settings&#39;</span><span class="p">]</span>
         <span class="n">feature_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;feature_names&#39;</span><span class="p">]</span>
         <span class="n">coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;coef&#39;</span><span class="p">]</span>
@@ -332,9 +332,9 @@
             <span class="n">html</span> <span class="o">+=</span> <span class="s">&#39;&lt;tr&gt;&lt;td style=&quot;border-bottom: 1px solid black&quot;&gt;{0}&lt;/td&gt;&lt;td style=&quot;border-bottom: 1px solid black&quot;&gt;{1}&lt;/td&gt;&lt;/tr&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">htmlescape</span><span class="p">(</span><span class="n">label</span><span class="p">),</span> <span class="n">features</span><span class="p">)</span>
         <span class="n">html</span> <span class="o">+=</span> <span class="s">&#39;&lt;/table&gt;&#39;</span>
         <span class="k">return</span> <span class="n">html</span>
-
+</div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">main_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGenerator.main_report"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGenerator.main_report">[docs]</a>    <span class="k">def</span> <span class="nf">main_report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">html</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;&lt;!DOCTYPE html&gt;</span>
 <span class="s">            &lt;html&gt;</span>
 <span class="s">            &lt;head&gt;</span>
@@ -359,9 +359,9 @@
         <span class="n">html</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">significant_features</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
         <span class="n">html</span> <span class="o">+=</span> <span class="s">&#39;&lt;/body&gt;&lt;/html&gt;&#39;</span>
         <span class="k">return</span> <span class="n">html</span>
-
+</div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">misclassified_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ReportGenerator.misclassified_data"><a class="viewcode-back" href="../../../estnltk.textclassifier.html#estnltk.textclassifier.reportgenerator.ReportGenerator.misclassified_data">[docs]</a>    <span class="k">def</span> <span class="nf">misclassified_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;y_true&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;y_pred&#39;</span><span class="p">]</span>
         <span class="n">sentences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;sentences&#39;</span><span class="p">]</span>
         <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s">&#39;dataframe&#39;</span><span class="p">]</span>
@@ -400,14 +400,14 @@
                             <span class="n">subdf</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">ta</span><span class="o">.</span><span class="n">annotate_important_features</span><span class="p">(</span><span class="n">htmlescape</span><span class="p">(</span><span class="n">subdf</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">idx</span><span class="p">]),</span> <span class="n">features</span><span class="p">)</span>
                     <span class="n">html</span> <span class="o">+=</span> <span class="n">subdf</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">html</span> <span class="o">+</span> <span class="s">&#39;&lt;/body&gt;&lt;/html&gt;&#39;</span>
-</pre></div></div>
+</pre></div></div></div>
 
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" />
@@ -424,7 +424,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -437,9 +437,9 @@
           <li><a href="../../index.html" >Module code</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
+    <div class="footer">
         &copy; Copyright 2014, University of Tartu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>

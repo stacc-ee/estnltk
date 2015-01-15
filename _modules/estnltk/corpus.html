@@ -23,12 +23,12 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="estnltk 1.1 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" /> 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,7 +45,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <h1>Source code for estnltk.corpus</h1><div class="highlight"><pre>
 <span class="c"># -*- coding: utf-8 -*-</span>
@@ -88,139 +88,139 @@
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
     </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">root_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.root_elements"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.root_elements">[docs]</a>    <span class="k">def</span> <span class="nf">root_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Root elements do not have meaningful hierarchial relationship between them in a corpus.</span>
 <span class="sd">           A root element contains all TEXT, START, END, REL_START, REL_END attributes.</span>
 <span class="sd">           START = REL_START = 0</span>
 <span class="sd">           END = REL_END     = len(TEXT)</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.words"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.words">[docs]</a>    <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">WORDS</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sentences</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.sentences"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.sentences">[docs]</a>    <span class="k">def</span> <span class="nf">sentences</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">SENTENCES</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">paragraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.paragraphs"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.paragraphs">[docs]</a>    <span class="k">def</span> <span class="nf">paragraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">PARAGRAPHS</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">documents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.documents"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.documents">[docs]</a>    <span class="k">def</span> <span class="nf">documents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">DOCUMENTS</span><span class="p">)</span>
         
-    <span class="c"># Methods for returning raw texts</span>
+    <span class="c"># Methods for returning raw texts</span></div>
 <div class="viewcode-block" id="Corpus.texts"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.texts">[docs]</a>    <span class="k">def</span> <span class="nf">texts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">what</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">what</span><span class="p">)]</span>
 </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.word_texts"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.word_texts">[docs]</a>    <span class="k">def</span> <span class="nf">word_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">texts</span><span class="p">(</span><span class="n">WORDS</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>    
-    <span class="k">def</span> <span class="nf">sentence_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.sentence_texts"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.sentence_texts">[docs]</a>    <span class="k">def</span> <span class="nf">sentence_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">texts</span><span class="p">(</span><span class="n">SENTENCES</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">paragraph_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.paragraph_texts"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.paragraph_texts">[docs]</a>    <span class="k">def</span> <span class="nf">paragraph_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">texts</span><span class="p">(</span><span class="n">PARAGRAPHS</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">document_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.document_texts"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.document_texts">[docs]</a>    <span class="k">def</span> <span class="nf">document_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">texts</span><span class="p">(</span><span class="n">DOCUMENTS</span><span class="p">)</span>
     
-    <span class="c"># methods for returning spans    </span>
+    <span class="c"># methods for returning spans    </span></div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.word_spans"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.word_spans">[docs]</a>    <span class="k">def</span> <span class="nf">word_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">span</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sentence_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.sentence_spans"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.sentence_spans">[docs]</a>    <span class="k">def</span> <span class="nf">sentence_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">span</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentences</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">paragraph_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.paragraph_spans"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.paragraph_spans">[docs]</a>    <span class="k">def</span> <span class="nf">paragraph_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">span</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">paragraphs</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_rel_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.word_rel_spans"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.word_rel_spans">[docs]</a>    <span class="k">def</span> <span class="nf">word_rel_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">rel_span</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sentence_rel_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.sentence_rel_spans"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.sentence_rel_spans">[docs]</a>    <span class="k">def</span> <span class="nf">sentence_rel_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">rel_span</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentences</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">paragraph_rel_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.paragraph_rel_spans"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.paragraph_rel_spans">[docs]</a>    <span class="k">def</span> <span class="nf">paragraph_rel_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">rel_span</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">paragraphs</span><span class="p">]</span>
         
-    <span class="c"># methods for returning word specific data</span>
+    <span class="c"># methods for returning word specific data</span></div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lemmas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.lemmas"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.lemmas">[docs]</a>    <span class="k">def</span> <span class="nf">lemmas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">lemma</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">postags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.postags"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.postags">[docs]</a>    <span class="k">def</span> <span class="nf">postags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">postag</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">forms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.forms"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.forms">[docs]</a>    <span class="k">def</span> <span class="nf">forms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">form</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">endings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.endings"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.endings">[docs]</a>    <span class="k">def</span> <span class="nf">endings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">ending</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.labels"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.labels">[docs]</a>    <span class="k">def</span> <span class="nf">labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">label</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.roots"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.roots">[docs]</a>    <span class="k">def</span> <span class="nf">roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">root</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clitics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.clitics"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.clitics">[docs]</a>    <span class="k">def</span> <span class="nf">clitics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">clitic</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">root_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.root_tokens"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.root_tokens">[docs]</a>    <span class="k">def</span> <span class="nf">root_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">root_tokens</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
     
     <span class="c"># methods for returning sentence specific data</span>
     
     <span class="c"># clause specific</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clause_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.clause_indices"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.clause_indices">[docs]</a>    <span class="k">def</span> <span class="nf">clause_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">clause_index</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clause_annotations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.clause_annotations"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.clause_annotations">[docs]</a>    <span class="k">def</span> <span class="nf">clause_annotations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">clause_annotation</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clauses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.clauses"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.clauses">[docs]</a>    <span class="k">def</span> <span class="nf">clauses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">CLAUSES</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">verb_chains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.verb_chains"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.verb_chains">[docs]</a>    <span class="k">def</span> <span class="nf">verb_chains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">VERB_CHAINS</span><span class="p">)</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">named_entities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.named_entities"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.named_entities">[docs]</a>    <span class="k">def</span> <span class="nf">named_entities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">NAMED_ENTITIES</span><span class="p">)</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">timexes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Corpus.timexes"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Corpus.timexes">[docs]</a>    <span class="k">def</span> <span class="nf">timexes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">(</span><span class="n">TIMEXES</span><span class="p">)</span>
 
         
     <span class="c"># other methods</span>
-    
+    </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;Corpus&#39;</span><span class="p">)</span>
     
@@ -241,7 +241,7 @@
     </div>
     <span class="nd">@property</span>
     <span class="nd">@overrides</span><span class="p">(</span><span class="n">Corpus</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">root_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="List.root_elements"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.List.root_elements">[docs]</a>    <span class="k">def</span> <span class="nf">root_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">is_root_element</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="p">]</span>
         <span class="n">elements</span> <span class="o">=</span> <span class="p">[]</span>
@@ -252,7 +252,7 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">elements</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">root_elements</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">elements</span>
-        
+        </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;List&#39;</span><span class="p">)</span>
 
@@ -269,7 +269,7 @@
     </div>
     <span class="nd">@property</span>
     <span class="nd">@overrides</span><span class="p">(</span><span class="n">Corpus</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">root_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Dictionary.root_elements"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Dictionary.root_elements">[docs]</a>    <span class="k">def</span> <span class="nf">root_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">is_root_element</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="p">]</span>
         <span class="n">elements</span> <span class="o">=</span> <span class="p">[]</span>
@@ -280,7 +280,7 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">elements</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">root_elements</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">elements</span>
-        
+        </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;Dictionary&#39;</span><span class="p">)</span>
     
@@ -335,34 +335,34 @@
         <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span>
 </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">span</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ElementMixin.span"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ElementMixin.span">[docs]</a>    <span class="k">def</span> <span class="nf">span</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
-
+</div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rel_span</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ElementMixin.rel_span"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ElementMixin.rel_span">[docs]</a>    <span class="k">def</span> <span class="nf">rel_span</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel_start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rel_end</span><span class="p">)</span>
-
+</div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ElementMixin.start"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ElementMixin.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">START</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ElementMixin.end"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ElementMixin.end">[docs]</a>    <span class="k">def</span> <span class="nf">end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">END</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rel_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ElementMixin.rel_start"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ElementMixin.rel_start">[docs]</a>    <span class="k">def</span> <span class="nf">rel_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">REL_START</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rel_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ElementMixin.rel_end"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ElementMixin.rel_end">[docs]</a>    <span class="k">def</span> <span class="nf">rel_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">REL_END</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ElementMixin.text"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ElementMixin.text">[docs]</a>    <span class="k">def</span> <span class="nf">text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">TEXT</span><span class="p">]</span>
         
-</div>
+</div></div>
 <div class="viewcode-block" id="Document"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Document">[docs]</a><span class="k">class</span> <span class="nc">Document</span><span class="p">(</span><span class="n">ElementMixin</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Estnltk Document object.</span>
 
@@ -486,7 +486,7 @@
         </div>
     <span class="nd">@property</span>
     <span class="nd">@overrides</span><span class="p">(</span><span class="n">Corpus</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">named_entities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Sentence.named_entities"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Sentence.named_entities">[docs]</a>    <span class="k">def</span> <span class="nf">named_entities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">nes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">word_start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
         <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">+</span> <span class="p">[</span><span class="s">&#39;O&#39;</span><span class="p">]</span> <span class="c"># last is sentinel</span>
@@ -500,10 +500,10 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">word_start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
         <span class="k">return</span> <span class="n">nes</span>
-        
+        </div>
     <span class="nd">@property</span>
     <span class="nd">@overrides</span><span class="p">(</span><span class="n">Corpus</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">clauses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Sentence.clauses"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Sentence.clauses">[docs]</a>    <span class="k">def</span> <span class="nf">clauses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">clauses</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">WORDS</span><span class="p">]):</span>
             <span class="n">idx</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">clause_index</span>
@@ -511,10 +511,10 @@
             <span class="n">clause</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
             <span class="n">clauses</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">clause</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">Clause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">clauses</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">clauses</span><span class="o">.</span><span class="n">keys</span><span class="p">())]</span>
-    
+    </div>
     <span class="nd">@property</span>
     <span class="nd">@overrides</span><span class="p">(</span><span class="n">Corpus</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">timexes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Sentence.timexes"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Sentence.timexes">[docs]</a>    <span class="k">def</span> <span class="nf">timexes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">timex_data</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">WORDS</span><span class="p">]):</span>
             <span class="k">if</span> <span class="n">TIMEXES</span> <span class="ow">in</span> <span class="n">w</span><span class="p">:</span>
@@ -530,14 +530,14 @@
             <span class="n">end_word</span> <span class="o">=</span> <span class="n">timexes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
             <span class="n">timex_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Timex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_word</span><span class="p">,</span> <span class="n">end_word</span><span class="p">,</span> <span class="n">timexes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
         <span class="k">return</span> <span class="n">timex_objects</span>
-    
+    </div>
     <span class="nd">@property</span>
     <span class="nd">@overrides</span><span class="p">(</span><span class="n">Corpus</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">verb_chains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Sentence.verb_chains"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Sentence.verb_chains">[docs]</a>    <span class="k">def</span> <span class="nf">verb_chains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">VERB_CHAINS</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">[</span><span class="n">VerbChain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">[</span><span class="n">PHRASE</span><span class="p">],</span> <span class="n">chain</span><span class="p">)</span> <span class="k">for</span> <span class="n">chain</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">[</span><span class="n">VERB_CHAINS</span><span class="p">]]</span>
         <span class="k">return</span> <span class="p">[]</span>
-    
+    </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;Sentence({0})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;...&#39;</span><span class="p">))</span>
 
@@ -588,16 +588,16 @@
         <span class="k">assert</span> <span class="n">WORD_END</span> <span class="ow">in</span> <span class="bp">self</span>
         </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ConsequentSentenceElement.word_start"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ConsequentSentenceElement.word_start">[docs]</a>    <span class="k">def</span> <span class="nf">word_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        int</span>
 <span class="sd">            The start position of the first named entity word in the sentence.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">WORD_START</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ConsequentSentenceElement.word_end"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ConsequentSentenceElement.word_end">[docs]</a>    <span class="k">def</span> <span class="nf">word_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        int</span>
@@ -606,27 +606,27 @@
 <span class="sd">            the words of a named entity in the sentence.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">WORD_END</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_span</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ConsequentSentenceElement.word_span"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ConsequentSentenceElement.word_span">[docs]</a>    <span class="k">def</span> <span class="nf">word_span</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        (int, int)</span>
 <span class="sd">            The start and end positions of the named entity words.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">word_start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_end</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ConsequentSentenceElement.word_indices"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ConsequentSentenceElement.word_indices">[docs]</a>    <span class="k">def</span> <span class="nf">word_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        list of int</span>
 <span class="sd">            The indices of words in the sentence.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">word_start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_end</span><span class="p">))</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ConsequentSentenceElement.words"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.ConsequentSentenceElement.words">[docs]</a>    <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        list of :class:`estnltk.corpus.Word&#39;</span>
@@ -634,7 +634,7 @@
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">[</span><span class="n">WORDS</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_indices</span><span class="p">]</span>
 
-</div>
+</div></div>
 <div class="viewcode-block" id="NamedEntity"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.NamedEntity">[docs]</a><span class="k">class</span> <span class="nc">NamedEntity</span><span class="p">(</span><span class="n">ConsequentSentenceElement</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Named entities have to be constructed from sentences containing</span>
 <span class="sd">    the labelled words. Named entity represents a group of words</span>
@@ -669,7 +669,7 @@
                 <span class="k">assert</span> <span class="n">w</span><span class="o">.</span><span class="n">label</span> <span class="o">==</span> <span class="s">&#39;I-&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span>
     </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="NamedEntity.label"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.NamedEntity.label">[docs]</a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;The labels of named entity words have either prefixes</span>
 <span class="sd">        **B-** or **I-**, denoting *beginning* and *inside* respectively.</span>
 <span class="sd">        However, the real label is stored as a suffix, which can be</span>
@@ -681,16 +681,16 @@
 <span class="sd">            The label of the named entity.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">LABEL</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lemma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="NamedEntity.lemma"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.NamedEntity.lemma">[docs]</a>    <span class="k">def</span> <span class="nf">lemma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
 <span class="sd">            The named entity lemma ie the word lemmas separated by space.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">w</span><span class="o">.</span><span class="n">lemma</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">words</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    
+    </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;NamedEntity({0}, {1})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lemma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">))</span>
         
@@ -712,42 +712,42 @@
         <span class="k">assert</span> <span class="n">TMX_ID</span> <span class="ow">in</span> <span class="bp">self</span>
 </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.id"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.id">[docs]</a>    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        int</span>
 <span class="sd">            The timex identificator.&#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">TMX_ID</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.type"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.type">[docs]</a>    <span class="k">def</span> <span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
 <span class="sd">            One of the following: &quot;DATE&quot;, &quot;TIME&quot;, &quot;DURATION&quot;, &quot;SET&quot;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_TYPE</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.value"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.value">[docs]</a>    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
 <span class="sd">            calendrical value (largely follows TimeML TIMEX3 value format)</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_VALUE</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">temporal_function</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.temporal_function"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.temporal_function">[docs]</a>    <span class="k">def</span> <span class="nf">temporal_function</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
 <span class="sd">            whether the &quot;value&quot; was found by heuristics/calculations (thus can be wrong): &quot;true&quot;, &quot;false&quot;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_TEMP_FUNCTION</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mod</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.mod"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.mod">[docs]</a>    <span class="k">def</span> <span class="nf">mod</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
@@ -756,9 +756,9 @@
 <span class="sd">            half of the month&quot;):  FIRST_HALF, SECOND_HALF;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_MOD</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">anchor_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.anchor_id"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.anchor_id">[docs]</a>    <span class="k">def</span> <span class="nf">anchor_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        int</span>
@@ -768,9 +768,9 @@
 <span class="sd">            time;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_ANCHOR</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">begin_point</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.begin_point"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.begin_point">[docs]</a>    <span class="k">def</span> <span class="nf">begin_point</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
@@ -779,9 +779,9 @@
 <span class="sd">            &quot;?&quot; -- indicates problems on finding the beginning point;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_BEGINPOINT</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">end_point</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.end_point"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.end_point">[docs]</a>    <span class="k">def</span> <span class="nf">end_point</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
@@ -790,18 +790,18 @@
 <span class="sd">            &quot;?&quot; -- indicates problems on finding the ending point;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_ENDPOINT</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">quant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.quant"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.quant">[docs]</a>    <span class="k">def</span> <span class="nf">quant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
 <span class="sd">            Quantifier; Used only in some SET expressions, e.g. quant=&quot;EVERY&quot;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_QUANT</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">freq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Timex.freq"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Timex.freq">[docs]</a>    <span class="k">def</span> <span class="nf">freq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        str</span>
@@ -809,7 +809,7 @@
 <span class="sd">            &quot;three days in each month&quot; will be have freq=&quot;3D&quot;</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TMX_FREQ</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;Timex({0}, {1}, {2}, [timex_id={3}])&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
 
@@ -826,31 +826,31 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_word_indices</span> <span class="o">=</span> <span class="n">indices</span>
         
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sentence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SparseSentenceElement.sentence"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.SparseSentenceElement.sentence">[docs]</a>    <span class="k">def</span> <span class="nf">sentence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sentence</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SparseSentenceElement.text"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.SparseSentenceElement.text">[docs]</a>    <span class="k">def</span> <span class="nf">text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_groups</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">text_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SparseSentenceElement.text_groups"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.SparseSentenceElement.text_groups">[docs]</a>    <span class="k">def</span> <span class="nf">text_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">[</span><span class="n">WORDS</span><span class="p">][</span><span class="n">start</span><span class="p">]</span><span class="o">.</span><span class="n">rel_start</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">[</span><span class="n">WORDS</span><span class="p">][</span><span class="n">end</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">rel_end</span><span class="p">]</span> <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_group_spans</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SparseSentenceElement.words"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.SparseSentenceElement.words">[docs]</a>    <span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">[</span><span class="n">WORDS</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_indices</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SparseSentenceElement.word_indices"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.SparseSentenceElement.word_indices">[docs]</a>    <span class="k">def</span> <span class="nf">word_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_word_indices</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SparseSentenceElement.word_groups"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.SparseSentenceElement.word_groups">[docs]</a>    <span class="k">def</span> <span class="nf">word_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">[</span><span class="n">WORDS</span><span class="p">][</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]]</span> <span class="k">for</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">group_word_spans</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_group_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SparseSentenceElement.word_group_spans"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.SparseSentenceElement.word_group_spans">[docs]</a>    <span class="k">def</span> <span class="nf">word_group_spans</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Return list of consequent index spans.&#39;&#39;&#39;</span>
         <span class="n">start_idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">last_idx</span> <span class="o">=</span> <span class="n">start_idx</span>
@@ -863,7 +863,7 @@
         <span class="n">groups</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">start_idx</span><span class="p">,</span> <span class="n">last_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">groups</span>
 
-</div>
+</div></div>
 <div class="viewcode-block" id="Clause"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Clause">[docs]</a><span class="k">class</span> <span class="nc">Clause</span><span class="p">(</span><span class="n">SparseSentenceElement</span><span class="p">):</span>
     
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentence</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
@@ -871,9 +871,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_clause_index</span> <span class="o">=</span> <span class="n">sentence</span><span class="p">[</span><span class="n">WORDS</span><span class="p">][</span><span class="n">indices</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">clause_index</span>
     
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clause_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Clause.clause_index"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Clause.clause_index">[docs]</a>    <span class="k">def</span> <span class="nf">clause_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clause_index</span>
-     
+     </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;Clause({0} [clause_index={1}])&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clause_index</span><span class="p">))</span>
         
@@ -885,56 +885,56 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="n">data</span>
     
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.data"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.data">[docs]</a>    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
- 
+ </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">polarity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.polarity"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.polarity">[docs]</a>    <span class="k">def</span> <span class="nf">polarity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">POLARITY</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.roots"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.roots">[docs]</a>    <span class="k">def</span> <span class="nf">roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">ROOTS</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lemma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.lemma"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.lemma">[docs]</a>    <span class="k">def</span> <span class="nf">lemma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Verb chain lemma. A unique identificator for the chain.&#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="s">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">roots</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.pattern"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.pattern">[docs]</a>    <span class="k">def</span> <span class="nf">pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s">&#39;+&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">PATTERN</span><span class="p">])</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pattern_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.pattern_tokens"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.pattern_tokens">[docs]</a>    <span class="k">def</span> <span class="nf">pattern_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">PATTERN</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">other_verbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.other_verbs"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.other_verbs">[docs]</a>    <span class="k">def</span> <span class="nf">other_verbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">OTHER_VERBS</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">analysis_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.analysis_ids"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.analysis_ids">[docs]</a>    <span class="k">def</span> <span class="nf">analysis_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">ANALYSIS_IDS</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">morph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.morph"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.morph">[docs]</a>    <span class="k">def</span> <span class="nf">morph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">MORPH</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clause_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.clause_index"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.clause_index">[docs]</a>    <span class="k">def</span> <span class="nf">clause_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">CLAUSE_IDX</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.word_indices"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.word_indices">[docs]</a>    <span class="k">def</span> <span class="nf">word_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Consequent word indices.&#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_word_indices</span><span class="p">))</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">word_indices_chain</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VerbChain.word_indices_chain"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.VerbChain.word_indices_chain">[docs]</a>    <span class="k">def</span> <span class="nf">word_indices_chain</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;The real order of word indices making up a chain.&#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_word_indices</span>
-    
+    </div>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="s">&#39;VerbChain({0}, {1}, {2}, {3})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lemma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarity</span><span class="p">))</span>
 
@@ -962,76 +962,76 @@
     
     
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.analysis"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.analysis">[docs]</a>    <span class="k">def</span> <span class="nf">analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ANALYSIS</span><span class="p">,</span> <span class="p">[])</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lemmas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.lemmas"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.lemmas">[docs]</a>    <span class="k">def</span> <span class="nf">lemmas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">LEMMA</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lemma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.lemma"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.lemma">[docs]</a>    <span class="k">def</span> <span class="nf">lemma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">most_frequent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lemmas</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">postags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.postags"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.postags">[docs]</a>    <span class="k">def</span> <span class="nf">postags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">POSTAG</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">postag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.postag"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.postag">[docs]</a>    <span class="k">def</span> <span class="nf">postag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">most_frequent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">postags</span><span class="p">)</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">forms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.forms"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.forms">[docs]</a>    <span class="k">def</span> <span class="nf">forms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">FORM</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">form</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.form"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.form">[docs]</a>    <span class="k">def</span> <span class="nf">form</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">most_frequent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">forms</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">endings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.endings"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.endings">[docs]</a>    <span class="k">def</span> <span class="nf">endings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">ENDING</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis</span><span class="p">]</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ending</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.ending"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.ending">[docs]</a>    <span class="k">def</span> <span class="nf">ending</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">most_frequent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">endings</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.label"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.label">[docs]</a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">LABEL</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.roots"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.roots">[docs]</a>    <span class="k">def</span> <span class="nf">roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">ROOT</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.root"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.root">[docs]</a>    <span class="k">def</span> <span class="nf">root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">most_frequent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">roots</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clitics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.clitics"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.clitics">[docs]</a>    <span class="k">def</span> <span class="nf">clitics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">CLITIC</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis</span><span class="p">]</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clitic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.clitic"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.clitic">[docs]</a>    <span class="k">def</span> <span class="nf">clitic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">most_frequent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clitics</span><span class="p">)</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">root_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.root_tokens"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.root_tokens">[docs]</a>    <span class="k">def</span> <span class="nf">root_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">ROOT_TOKENS</span><span class="p">])</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis</span><span class="p">]</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">most_frequent</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clause_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.clause_index"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.clause_index">[docs]</a>    <span class="k">def</span> <span class="nf">clause_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">CLAUSE_IDX</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    
+    </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">clause_annotation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.clause_annotation"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.clause_annotation">[docs]</a>    <span class="k">def</span> <span class="nf">clause_annotation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">CLAUSE_ANNOTATION</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-        
+        </div>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">timex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Word.timex_data"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.Word.timex_data">[docs]</a>    <span class="k">def</span> <span class="nf">timex_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Returns</span>
 <span class="sd">        --------</span>
 <span class="sd">        list of str</span>
@@ -1041,7 +1041,7 @@
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TIMEXES</span><span class="p">,</span> <span class="p">[])</span>
 
-</div>
+</div></div>
 <div class="viewcode-block" id="most_frequent"><a class="viewcode-back" href="../../estnltk.html#estnltk.corpus.most_frequent">[docs]</a><span class="k">def</span> <span class="nf">most_frequent</span><span class="p">(</span><span class="n">elements</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Return the most frequent element from the list.</span>
 <span class="sd">    In case of equal counts, return alphabetically first.</span>
@@ -1134,9 +1134,9 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -1153,7 +1153,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1166,9 +1166,9 @@
           <li><a href="../index.html" >Module code</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
+    <div class="footer">
         &copy; Copyright 2014, University of Tartu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>

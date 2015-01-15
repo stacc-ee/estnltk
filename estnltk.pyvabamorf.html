@@ -23,11 +23,13 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="estnltk 1.1 documentation" href="index.html" /> 
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="estnltk 1.1 documentation" href="index.html" />
+    <link rel="next" title="estnltk.mw_verbs package" href="estnltk.mw_verbs.html" />
+    <link rel="prev" title="estnltk.estner package" href="estnltk.estner.html" /> 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -36,6 +38,12 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="estnltk.mw_verbs.html" title="estnltk.mw_verbs package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="estnltk.estner.html" title="estnltk.estner package"
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -43,7 +51,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="estnltk-pyvabamorf-package">
 <h1>estnltk.pyvabamorf package<a class="headerlink" href="#estnltk-pyvabamorf-package" title="Permalink to this headline">¶</a></h1>
@@ -78,8 +86,8 @@
 </dl>
 <dl class="class">
 <dt id="estnltk.pyvabamorf.morf.PyVabamorf">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">PyVabamorf</code><span class="sig-paren">(</span><em>lexPath='/home/timo/projects/estnltk/estnltk/pyvabamorf/dct'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">PyVabamorf</tt><big>(</big><em>lexPath='/home/timo/projects/estnltk/estnltk/pyvabamorf/dct'</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Class for performing main tasks of morphological analysis.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
@@ -96,27 +104,9 @@
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.morf.PyVabamorf.analyze" title="estnltk.pyvabamorf.morf.PyVabamorf.analyze"><code class="xref py py-obj docutils literal"><span class="pre">analyze</span></code></a>(words,&nbsp;**kwargs)</td>
-<td>Perform morphological analysis on input.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.morf.PyVabamorf.instance" title="estnltk.pyvabamorf.morf.PyVabamorf.instance"><code class="xref py py-obj docutils literal"><span class="pre">instance</span></code></a>()</td>
-<td>Return an PyVabamorf instance.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.morf.PyVabamorf.synthesize" title="estnltk.pyvabamorf.morf.PyVabamorf.synthesize"><code class="xref py py-obj docutils literal"><span class="pre">synthesize</span></code></a>(lemma[,&nbsp;partofspeech,&nbsp;form,&nbsp;...])</td>
-<td>Given lemma, pos tag and a form, synthesize the word.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="estnltk.pyvabamorf.morf.PyVabamorf.analyze">
-<code class="descname">analyze</code><span class="sig-paren">(</span><em>words</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf.analyze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf.analyze" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">analyze</tt><big>(</big><em>words</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf.analyze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf.analyze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform morphological analysis on input.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -154,7 +144,7 @@ analyser does not perform disambiguation.</p>
 
 <dl class="staticmethod">
 <dt id="estnltk.pyvabamorf.morf.PyVabamorf.instance">
-<em class="property">static </em><code class="descname">instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf.instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><tt class="descname">instance</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf.instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an PyVabamorf instance.</p>
 <p>It returns the previously initialized instance or creates a new
 one if nothing exists. Also creates new instance in case the
@@ -163,7 +153,7 @@ process has been forked.</p>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.morf.PyVabamorf.synthesize">
-<code class="descname">synthesize</code><span class="sig-paren">(</span><em>lemma</em>, <em>partofspeech=''</em>, <em>form=''</em>, <em>hint=''</em>, <em>guess=True</em>, <em>phonetic=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf.synthesize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf.synthesize" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">synthesize</tt><big>(</big><em>lemma</em>, <em>partofspeech=''</em>, <em>form=''</em>, <em>hint=''</em>, <em>guess=True</em>, <em>phonetic=False</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#PyVabamorf.synthesize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.PyVabamorf.synthesize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given lemma, pos tag and a form, synthesize the word.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -209,7 +199,7 @@ process has been forked.</p>
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.analysis_as_dict">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">analysis_as_dict</code><span class="sig-paren">(</span><em>an</em>, <em>trim_phonetic=True</em>, <em>trim_compound=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#analysis_as_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.analysis_as_dict" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">analysis_as_dict</tt><big>(</big><em>an</em>, <em>trim_phonetic=True</em>, <em>trim_compound=True</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#analysis_as_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.analysis_as_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert an analysis instance to a dictionary.
 Also adds &#8220;ma&#8221; ending to verbs.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -242,7 +232,7 @@ Also adds &#8220;ma&#8221; ending to verbs.</p>
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.analyze">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">analyze</code><span class="sig-paren">(</span><em>words</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#analyze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.analyze" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">analyze</tt><big>(</big><em>words</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#analyze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.analyze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform morphological analysis on input.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -280,21 +270,21 @@ analyser does not perform disambiguation.</p>
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.convert">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">convert</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#convert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.convert" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">convert</tt><big>(</big><em>word</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#convert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.convert" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method converts given <cite>word</cite> to appropriate encoding and type to be given to
 SWIG wrapper.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.deconvert">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">deconvert</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#deconvert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.deconvert" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">deconvert</tt><big>(</big><em>word</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#deconvert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.deconvert" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method converts back the output from wrapper.
 Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Python3</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.get_args">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">get_args</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_args" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">get_args</tt><big>(</big><em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_args" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse arguments from keyword parameters.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -318,7 +308,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.get_group_tokens">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">get_group_tokens</code><span class="sig-paren">(</span><em>root</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_group_tokens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_group_tokens" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">get_group_tokens</tt><big>(</big><em>root</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_group_tokens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_group_tokens" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to extract tokens in hyphenated groups (saunameheks-tallimeheks).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -342,12 +332,12 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.get_lemma">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">get_lemma</code><span class="sig-paren">(</span><em>grouptoks</em>, <em>partofspeech</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_lemma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_lemma" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">get_lemma</tt><big>(</big><em>grouptoks</em>, <em>partofspeech</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_lemma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_lemma" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.get_root">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">get_root</code><span class="sig-paren">(</span><em>root</em>, <em>phonetic</em>, <em>compound</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_root" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">get_root</tt><big>(</big><em>root</em>, <em>phonetic</em>, <em>compound</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#get_root"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.get_root" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the root form without markers.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -373,7 +363,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.regex_from_markers">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">regex_from_markers</code><span class="sig-paren">(</span><em>markers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#regex_from_markers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.regex_from_markers" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">regex_from_markers</tt><big>(</big><em>markers</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#regex_from_markers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.regex_from_markers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a string of characters, construct a regex that matches them.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -397,7 +387,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.synthesize">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">synthesize</code><span class="sig-paren">(</span><em>lemma</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#synthesize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.synthesize" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">synthesize</tt><big>(</big><em>lemma</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#synthesize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.synthesize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given lemma, pos tag and a form, synthesize the word.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -441,7 +431,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.trim_compounds">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">trim_compounds</code><span class="sig-paren">(</span><em>root</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#trim_compounds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.trim_compounds" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">trim_compounds</tt><big>(</big><em>root</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#trim_compounds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.trim_compounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function that trims compound markup from the root.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -465,7 +455,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 
 <dl class="function">
 <dt id="estnltk.pyvabamorf.morf.trim_phonetics">
-<code class="descclassname">estnltk.pyvabamorf.morf.</code><code class="descname">trim_phonetics</code><span class="sig-paren">(</span><em>root</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#trim_phonetics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.trim_phonetics" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.morf.</tt><tt class="descname">trim_phonetics</tt><big>(</big><em>root</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/morf.html#trim_phonetics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.morf.trim_phonetics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function that trims phonetic markup from the root.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -493,792 +483,468 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 <span id="estnltk-pyvabamorf-vabamorf-module"></span><h2>estnltk.pyvabamorf.vabamorf module<a class="headerlink" href="#module-estnltk.pyvabamorf.vabamorf" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.Analysis">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">Analysis</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Analysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.Analysis.clitic" title="estnltk.pyvabamorf.vabamorf.Analysis.clitic"><code class="xref py py-obj docutils literal"><span class="pre">clitic</span></code></a></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.Analysis.ending" title="estnltk.pyvabamorf.vabamorf.Analysis.ending"><code class="xref py py-obj docutils literal"><span class="pre">ending</span></code></a></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.Analysis.form" title="estnltk.pyvabamorf.vabamorf.Analysis.form"><code class="xref py py-obj docutils literal"><span class="pre">form</span></code></a></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.Analysis.partofspeech" title="estnltk.pyvabamorf.vabamorf.Analysis.partofspeech"><code class="xref py py-obj docutils literal"><span class="pre">partofspeech</span></code></a></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.Analysis.root" title="estnltk.pyvabamorf.vabamorf.Analysis.root"><code class="xref py py-obj docutils literal"><span class="pre">root</span></code></a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">Analysis</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Analysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="attribute">
 <dt id="estnltk.pyvabamorf.vabamorf.Analysis.clitic">
-<code class="descname">clitic</code><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.clitic" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">clitic</tt><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.clitic" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="estnltk.pyvabamorf.vabamorf.Analysis.ending">
-<code class="descname">ending</code><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.ending" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">ending</tt><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.ending" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="estnltk.pyvabamorf.vabamorf.Analysis.form">
-<code class="descname">form</code><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.form" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">form</tt><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.form" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="estnltk.pyvabamorf.vabamorf.Analysis.partofspeech">
-<code class="descname">partofspeech</code><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.partofspeech" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">partofspeech</tt><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.partofspeech" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="estnltk.pyvabamorf.vabamorf.Analysis.root">
-<code class="descname">root</code><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.root" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">root</tt><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analysis.root" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">AnalysisVector</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.append" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.assign" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.assign"><code class="xref py py-obj docutils literal"><span class="pre">assign</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.back" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.back"><code class="xref py py-obj docutils literal"><span class="pre">back</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.begin" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.begin"><code class="xref py py-obj docutils literal"><span class="pre">begin</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.capacity" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.capacity"><code class="xref py py-obj docutils literal"><span class="pre">capacity</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.clear" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.empty" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.empty"><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.end" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.end"><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.erase" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.erase"><code class="xref py py-obj docutils literal"><span class="pre">erase</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.front" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.front"><code class="xref py py-obj docutils literal"><span class="pre">front</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.get_allocator" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.get_allocator"><code class="xref py py-obj docutils literal"><span class="pre">get_allocator</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.insert" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.iterator" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.iterator"><code class="xref py py-obj docutils literal"><span class="pre">iterator</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.pop" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.pop_back" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.pop_back"><code class="xref py py-obj docutils literal"><span class="pre">pop_back</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.push_back" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.push_back"><code class="xref py py-obj docutils literal"><span class="pre">push_back</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.rbegin" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.rbegin"><code class="xref py py-obj docutils literal"><span class="pre">rbegin</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.rend" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.rend"><code class="xref py py-obj docutils literal"><span class="pre">rend</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.reserve" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.reserve"><code class="xref py py-obj docutils literal"><span class="pre">reserve</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.resize" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.resize"><code class="xref py py-obj docutils literal"><span class="pre">resize</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.size" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.size"><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.swap" title="estnltk.pyvabamorf.vabamorf.AnalysisVector.swap"><code class="xref py py-obj docutils literal"><span class="pre">swap</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">AnalysisVector</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.append" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">append</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.append" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.assign">
-<code class="descname">assign</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.assign" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">assign</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.assign" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.back">
-<code class="descname">back</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::value_type const &amp;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">back</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.begin">
-<code class="descname">begin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.begin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.begin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">begin</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.begin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.begin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.capacity">
-<code class="descname">capacity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::size_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.capacity" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">capacity</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.capacity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.clear" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">clear</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.clear" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.empty">
-<code class="descname">empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'bool'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.empty" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">empty</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.end">
-<code class="descname">end</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.end" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">end</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.end" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.erase">
-<code class="descname">erase</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.erase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.erase" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">erase</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.erase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.erase" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.front">
-<code class="descname">front</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::value_type const &amp;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.front"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.front" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">front</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.front"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.front" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.get_allocator">
-<code class="descname">get_allocator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::allocator_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.get_allocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.get_allocator" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_allocator</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.get_allocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.get_allocator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.insert">
-<code class="descname">insert</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.insert" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">insert</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.insert" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.iterator">
-<code class="descname">iterator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'swig::SwigPyIterator *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.iterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.iterator" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">iterator</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.iterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.iterator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.pop">
-<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::value_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.pop" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pop</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.pop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.pop_back">
-<code class="descname">pop_back</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.pop_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.pop_back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pop_back</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.pop_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.pop_back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.push_back">
-<code class="descname">push_back</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.push_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.push_back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">push_back</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.push_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.push_back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.rbegin">
-<code class="descname">rbegin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::reverse_iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.rbegin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.rbegin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">rbegin</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.rbegin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.rbegin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.rend">
-<code class="descname">rend</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::reverse_iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.rend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.rend" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">rend</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.rend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.rend" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.reserve">
-<code class="descname">reserve</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.reserve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.reserve" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reserve</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.reserve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.reserve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.resize">
-<code class="descname">resize</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.resize" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">resize</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.resize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.size">
-<code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; Analysis &gt;::size_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.size" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">size</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.size" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.AnalysisVector.swap">
-<code class="descname">swap</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.swap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.swap" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">swap</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#AnalysisVector.swap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.AnalysisVector.swap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.Analyzer">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">Analyzer</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Analyzer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analyzer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.Analyzer.analyze" title="estnltk.pyvabamorf.vabamorf.Analyzer.analyze"><code class="xref py py-obj docutils literal"><span class="pre">analyze</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">Analyzer</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Analyzer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.Analyzer.analyze">
-<code class="descname">analyze</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'std::vector&lt; WordAnalysis,std::allocator&lt; WordAnalysis &gt; &gt;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Analyzer.analyze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analyzer.analyze" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">analyze</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Analyzer.analyze"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Analyzer.analyze" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">SentenceAnalysis</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.append" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.assign" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.assign"><code class="xref py py-obj docutils literal"><span class="pre">assign</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.back" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.back"><code class="xref py py-obj docutils literal"><span class="pre">back</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.begin" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.begin"><code class="xref py py-obj docutils literal"><span class="pre">begin</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.capacity" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.capacity"><code class="xref py py-obj docutils literal"><span class="pre">capacity</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.clear" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.empty" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.empty"><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.end" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.end"><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.erase" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.erase"><code class="xref py py-obj docutils literal"><span class="pre">erase</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.front" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.front"><code class="xref py py-obj docutils literal"><span class="pre">front</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.get_allocator" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.get_allocator"><code class="xref py py-obj docutils literal"><span class="pre">get_allocator</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.insert" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.iterator" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.iterator"><code class="xref py py-obj docutils literal"><span class="pre">iterator</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop_back" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop_back"><code class="xref py py-obj docutils literal"><span class="pre">pop_back</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.push_back" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.push_back"><code class="xref py py-obj docutils literal"><span class="pre">push_back</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rbegin" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rbegin"><code class="xref py py-obj docutils literal"><span class="pre">rbegin</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rend" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rend"><code class="xref py py-obj docutils literal"><span class="pre">rend</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.reserve" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.reserve"><code class="xref py py-obj docutils literal"><span class="pre">reserve</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.resize" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.resize"><code class="xref py py-obj docutils literal"><span class="pre">resize</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.size" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.size"><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.swap" title="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.swap"><code class="xref py py-obj docutils literal"><span class="pre">swap</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">SentenceAnalysis</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.append" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">append</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.append" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.assign">
-<code class="descname">assign</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.assign" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">assign</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.assign" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.back">
-<code class="descname">back</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::value_type const &amp;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">back</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.begin">
-<code class="descname">begin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.begin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.begin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">begin</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.begin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.begin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.capacity">
-<code class="descname">capacity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::size_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.capacity" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">capacity</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.capacity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.clear" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">clear</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.clear" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.empty">
-<code class="descname">empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'bool'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.empty" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">empty</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.end">
-<code class="descname">end</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.end" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">end</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.end" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.erase">
-<code class="descname">erase</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.erase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.erase" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">erase</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.erase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.erase" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.front">
-<code class="descname">front</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::value_type const &amp;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.front"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.front" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">front</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.front"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.front" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.get_allocator">
-<code class="descname">get_allocator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::allocator_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.get_allocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.get_allocator" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_allocator</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.get_allocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.get_allocator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.insert">
-<code class="descname">insert</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.insert" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">insert</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.insert" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.iterator">
-<code class="descname">iterator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'swig::SwigPyIterator *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.iterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.iterator" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">iterator</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.iterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.iterator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop">
-<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::value_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pop</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop_back">
-<code class="descname">pop_back</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.pop_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop_back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pop_back</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.pop_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.pop_back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.push_back">
-<code class="descname">push_back</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.push_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.push_back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">push_back</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.push_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.push_back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rbegin">
-<code class="descname">rbegin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::reverse_iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.rbegin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rbegin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">rbegin</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.rbegin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rbegin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rend">
-<code class="descname">rend</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::reverse_iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.rend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rend" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">rend</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.rend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.rend" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.reserve">
-<code class="descname">reserve</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.reserve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.reserve" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reserve</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.reserve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.reserve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.resize">
-<code class="descname">resize</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.resize" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">resize</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.resize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.size">
-<code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::pair&lt; std::string,std::vector&lt; Analysis &gt; &gt; &gt;::size_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.size" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">size</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.size" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SentenceAnalysis.swap">
-<code class="descname">swap</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.swap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.swap" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">swap</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SentenceAnalysis.swap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SentenceAnalysis.swap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">StringVector</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.append" title="estnltk.pyvabamorf.vabamorf.StringVector.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.assign" title="estnltk.pyvabamorf.vabamorf.StringVector.assign"><code class="xref py py-obj docutils literal"><span class="pre">assign</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.back" title="estnltk.pyvabamorf.vabamorf.StringVector.back"><code class="xref py py-obj docutils literal"><span class="pre">back</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.begin" title="estnltk.pyvabamorf.vabamorf.StringVector.begin"><code class="xref py py-obj docutils literal"><span class="pre">begin</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.capacity" title="estnltk.pyvabamorf.vabamorf.StringVector.capacity"><code class="xref py py-obj docutils literal"><span class="pre">capacity</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.clear" title="estnltk.pyvabamorf.vabamorf.StringVector.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.empty" title="estnltk.pyvabamorf.vabamorf.StringVector.empty"><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.end" title="estnltk.pyvabamorf.vabamorf.StringVector.end"><code class="xref py py-obj docutils literal"><span class="pre">end</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.erase" title="estnltk.pyvabamorf.vabamorf.StringVector.erase"><code class="xref py py-obj docutils literal"><span class="pre">erase</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.front" title="estnltk.pyvabamorf.vabamorf.StringVector.front"><code class="xref py py-obj docutils literal"><span class="pre">front</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.get_allocator" title="estnltk.pyvabamorf.vabamorf.StringVector.get_allocator"><code class="xref py py-obj docutils literal"><span class="pre">get_allocator</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.insert" title="estnltk.pyvabamorf.vabamorf.StringVector.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.iterator" title="estnltk.pyvabamorf.vabamorf.StringVector.iterator"><code class="xref py py-obj docutils literal"><span class="pre">iterator</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.pop" title="estnltk.pyvabamorf.vabamorf.StringVector.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.pop_back" title="estnltk.pyvabamorf.vabamorf.StringVector.pop_back"><code class="xref py py-obj docutils literal"><span class="pre">pop_back</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.push_back" title="estnltk.pyvabamorf.vabamorf.StringVector.push_back"><code class="xref py py-obj docutils literal"><span class="pre">push_back</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.rbegin" title="estnltk.pyvabamorf.vabamorf.StringVector.rbegin"><code class="xref py py-obj docutils literal"><span class="pre">rbegin</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.rend" title="estnltk.pyvabamorf.vabamorf.StringVector.rend"><code class="xref py py-obj docutils literal"><span class="pre">rend</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.reserve" title="estnltk.pyvabamorf.vabamorf.StringVector.reserve"><code class="xref py py-obj docutils literal"><span class="pre">reserve</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.resize" title="estnltk.pyvabamorf.vabamorf.StringVector.resize"><code class="xref py py-obj docutils literal"><span class="pre">resize</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.size" title="estnltk.pyvabamorf.vabamorf.StringVector.size"><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.StringVector.swap" title="estnltk.pyvabamorf.vabamorf.StringVector.swap"><code class="xref py py-obj docutils literal"><span class="pre">swap</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">StringVector</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.append" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">append</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.append" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.assign">
-<code class="descname">assign</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.assign" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">assign</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.assign" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.back">
-<code class="descname">back</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::value_type const &amp;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">back</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.begin">
-<code class="descname">begin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.begin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.begin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">begin</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.begin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.begin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.capacity">
-<code class="descname">capacity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::size_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.capacity" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">capacity</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.capacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.capacity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.clear" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">clear</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.clear" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.empty">
-<code class="descname">empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'bool'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.empty" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">empty</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.end">
-<code class="descname">end</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.end" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">end</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.end" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.erase">
-<code class="descname">erase</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.erase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.erase" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">erase</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.erase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.erase" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.front">
-<code class="descname">front</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::value_type const &amp;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.front"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.front" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">front</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.front"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.front" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.get_allocator">
-<code class="descname">get_allocator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::allocator_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.get_allocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.get_allocator" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_allocator</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.get_allocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.get_allocator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.insert">
-<code class="descname">insert</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.insert" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">insert</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.insert" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.iterator">
-<code class="descname">iterator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'swig::SwigPyIterator *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.iterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.iterator" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">iterator</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.iterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.iterator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.pop">
-<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::value_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.pop" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pop</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.pop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.pop_back">
-<code class="descname">pop_back</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.pop_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.pop_back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">pop_back</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.pop_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.pop_back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.push_back">
-<code class="descname">push_back</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.push_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.push_back" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">push_back</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.push_back"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.push_back" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.rbegin">
-<code class="descname">rbegin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::reverse_iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.rbegin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.rbegin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">rbegin</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.rbegin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.rbegin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.rend">
-<code class="descname">rend</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::reverse_iterator'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.rend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.rend" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">rend</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.rend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.rend" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.reserve">
-<code class="descname">reserve</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.reserve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.reserve" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reserve</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.reserve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.reserve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.resize">
-<code class="descname">resize</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.resize" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">resize</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.resize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.size">
-<code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string &gt;::size_type'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.size" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">size</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.size" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.StringVector.swap">
-<code class="descname">swap</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'void'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.swap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.swap" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">swap</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#StringVector.swap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.StringVector.swap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">SwigPyIterator</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.advance" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.advance"><code class="xref py py-obj docutils literal"><span class="pre">advance</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.copy" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.decr" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.decr"><code class="xref py py-obj docutils literal"><span class="pre">decr</span></code></a>((n:&nbsp;=1)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.distance" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.distance"><code class="xref py py-obj docutils literal"><span class="pre">distance</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.equal" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.equal"><code class="xref py py-obj docutils literal"><span class="pre">equal</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.incr" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.incr"><code class="xref py py-obj docutils literal"><span class="pre">incr</span></code></a>((n:&nbsp;=1)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.next" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.next"><code class="xref py py-obj docutils literal"><span class="pre">next</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.previous" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.previous"><code class="xref py py-obj docutils literal"><span class="pre">previous</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.value" title="estnltk.pyvabamorf.vabamorf.SwigPyIterator.value"><code class="xref py py-obj docutils literal"><span class="pre">value</span></code></a>(()&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">SwigPyIterator</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.advance">
-<code class="descname">advance</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'swig::SwigPyIterator *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.advance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.advance" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">advance</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.advance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.advance" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'swig::SwigPyIterator *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.copy" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">copy</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.copy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.decr">
-<code class="descname">decr</code><span class="sig-paren">(</span><em>n: 'size_t'=1</em><span class="sig-paren">)</span> &rarr; 'swig::SwigPyIterator *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.decr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.decr" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">decr</tt><big>(</big><em>n=1</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.decr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.decr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.distance">
-<code class="descname">distance</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'ptrdiff_t'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.distance" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">distance</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.distance" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.equal">
-<code class="descname">equal</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'bool'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.equal" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">equal</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.equal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.incr">
-<code class="descname">incr</code><span class="sig-paren">(</span><em>n: 'size_t'=1</em><span class="sig-paren">)</span> &rarr; 'swig::SwigPyIterator *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.incr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.incr" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">incr</tt><big>(</big><em>n=1</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.incr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.incr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.next">
-<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'PyObject *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.next"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.next" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">next</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.next"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.next" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.previous">
-<code class="descname">previous</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'PyObject *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.previous"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.previous" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">previous</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.previous"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.previous" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.SwigPyIterator.value">
-<code class="descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &rarr; 'PyObject *'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.value" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">value</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#SwigPyIterator.value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.SwigPyIterator.value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.Synthesizer">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">Synthesizer</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Synthesizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Synthesizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.Synthesizer.synthesize" title="estnltk.pyvabamorf.vabamorf.Synthesizer.synthesize"><code class="xref py py-obj docutils literal"><span class="pre">synthesize</span></code></a>((*args)&nbsp;-&gt;&nbsp;)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">Synthesizer</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Synthesizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Synthesizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="method">
 <dt id="estnltk.pyvabamorf.vabamorf.Synthesizer.synthesize">
-<code class="descname">synthesize</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &rarr; 'std::vector&lt; std::string,std::allocator&lt; std::string &gt; &gt;'<a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Synthesizer.synthesize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Synthesizer.synthesize" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">synthesize</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#Synthesizer.synthesize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.Synthesizer.synthesize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="estnltk.pyvabamorf.vabamorf.WordAnalysis">
-<em class="property">class </em><code class="descclassname">estnltk.pyvabamorf.vabamorf.</code><code class="descname">WordAnalysis</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#WordAnalysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis.first" title="estnltk.pyvabamorf.vabamorf.WordAnalysis.first"><code class="xref py py-obj docutils literal"><span class="pre">first</span></code></a></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis.second" title="estnltk.pyvabamorf.vabamorf.WordAnalysis.second"><code class="xref py py-obj docutils literal"><span class="pre">second</span></code></a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<em class="property">class </em><tt class="descclassname">estnltk.pyvabamorf.vabamorf.</tt><tt class="descname">WordAnalysis</tt><big>(</big><em>*args</em><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf/vabamorf.html#WordAnalysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="attribute">
 <dt id="estnltk.pyvabamorf.vabamorf.WordAnalysis.first">
-<code class="descname">first</code><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis.first" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">first</tt><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis.first" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="estnltk.pyvabamorf.vabamorf.WordAnalysis.second">
-<code class="descname">second</code><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis.second" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">second</tt><a class="headerlink" href="#estnltk.pyvabamorf.vabamorf.WordAnalysis.second" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1288,7 +954,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-estnltk.pyvabamorf" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="estnltk.pyvabamorf.terminate">
-<code class="descclassname">estnltk.pyvabamorf.</code><code class="descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/estnltk/pyvabamorf.html#terminate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.terminate" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">estnltk.pyvabamorf.</tt><tt class="descname">terminate</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/estnltk/pyvabamorf.html#terminate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.pyvabamorf.terminate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -1298,7 +964,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -1309,22 +975,24 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
 <li><a class="reference internal" href="#attributes">Attributes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-estnltk.pyvabamorf.vabamorf">estnltk.pyvabamorf.vabamorf module</a><ul>
-</ul>
-</li>
+<li><a class="reference internal" href="#module-estnltk.pyvabamorf.vabamorf">estnltk.pyvabamorf.vabamorf module</a></li>
 <li><a class="reference internal" href="#module-estnltk.pyvabamorf">Module contents</a></li>
 </ul>
 </li>
 </ul>
 
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/estnltk.pyvabamorf.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="estnltk.estner.html"
+                        title="previous chapter">estnltk.estner package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="estnltk.mw_verbs.html"
+                        title="next chapter">estnltk.mw_verbs package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/estnltk.pyvabamorf.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -1341,7 +1009,7 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1350,12 +1018,18 @@ Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Pytho
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="estnltk.mw_verbs.html" title="estnltk.mw_verbs package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="estnltk.estner.html" title="estnltk.estner package"
+             >previous</a> |</li>
         <li><a href="index.html">estnltk 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
+    <div class="footer">
         &copy; Copyright 2014, University of Tartu.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>
