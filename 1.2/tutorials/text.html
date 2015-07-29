@@ -410,7 +410,7 @@ Often you want to extract various information, such as words, lemmas, postags an
 you could easily access all of them.
 Estnltk has <a class="reference internal" href="../api/text.html#estnltk.text.ZipBuilder" title="estnltk.text.ZipBuilder"><code class="xref py py-class docutils literal"><span class="pre">ZipBuilder</span></code></a> class, which can compile together properties you need and then
 format them in various ways.
-First, you can initiate the builder on a Text object by calling <a class="reference internal" href="../api/text.html#estnltk.text.Text.get" title="estnltk.text.Text.get"><code class="xref py py-attr docutils literal"><span class="pre">get</span></code></a> attribute and
+First, you can initiate the builder on a Text object by calling <code class="xref py py-attr docutils literal"><span class="pre">get</span></code> attribute and
 then chain together the attributes you wish to have.
 Last step is telling the format you want the data to appear.</p>
 <p>You can think of this process as building a sentence: <strong>get &lt;item_1&gt; &lt;item_2&gt; ... &lt;item_n&gt; as &lt;format&gt;</strong>.
@@ -942,27 +942,27 @@ True
 <div class="section" id="searching-replacing-and-splitting">
 <h2>Searching, replacing and splitting<a class="headerlink" href="#searching-replacing-and-splitting" title="Permalink to this headline">¶</a></h2>
 <p>Estnltk <a class="reference internal" href="../api/text.html#estnltk.text.Text" title="estnltk.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> class mimics the behaviour of some string functions for convenience:
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.capitalize" title="estnltk.text.Text.capitalize"><code class="xref py py-meth docutils literal"><span class="pre">capitalize()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.count" title="estnltk.text.Text.count"><code class="xref py py-meth docutils literal"><span class="pre">count()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.endswith" title="estnltk.text.Text.endswith"><code class="xref py py-meth docutils literal"><span class="pre">endswith()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.find" title="estnltk.text.Text.find"><code class="xref py py-meth docutils literal"><span class="pre">find()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.index" title="estnltk.text.Text.index"><code class="xref py py-meth docutils literal"><span class="pre">index()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.isalnum" title="estnltk.text.Text.isalnum"><code class="xref py py-meth docutils literal"><span class="pre">isalnum()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.isalpha" title="estnltk.text.Text.isalpha"><code class="xref py py-meth docutils literal"><span class="pre">isalpha()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.isdigit" title="estnltk.text.Text.isdigit"><code class="xref py py-meth docutils literal"><span class="pre">isdigit()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.islower" title="estnltk.text.Text.islower"><code class="xref py py-meth docutils literal"><span class="pre">islower()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.isspace" title="estnltk.text.Text.isspace"><code class="xref py py-meth docutils literal"><span class="pre">isspace()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.istitle" title="estnltk.text.Text.istitle"><code class="xref py py-meth docutils literal"><span class="pre">istitle()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.isupper" title="estnltk.text.Text.isupper"><code class="xref py py-meth docutils literal"><span class="pre">isupper()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.lower" title="estnltk.text.Text.lower"><code class="xref py py-meth docutils literal"><span class="pre">lower()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.lstrip" title="estnltk.text.Text.lstrip"><code class="xref py py-meth docutils literal"><span class="pre">lstrip()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.replace" title="estnltk.text.Text.replace"><code class="xref py py-meth docutils literal"><span class="pre">replace()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.rfind" title="estnltk.text.Text.rfind"><code class="xref py py-meth docutils literal"><span class="pre">rfind()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.rindex" title="estnltk.text.Text.rindex"><code class="xref py py-meth docutils literal"><span class="pre">rindex()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.rstrip" title="estnltk.text.Text.rstrip"><code class="xref py py-meth docutils literal"><span class="pre">rstrip()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.startswith" title="estnltk.text.Text.startswith"><code class="xref py py-meth docutils literal"><span class="pre">startswith()</span></code></a>,
-<a class="reference internal" href="../api/text.html#estnltk.text.Text.strip" title="estnltk.text.Text.strip"><code class="xref py py-meth docutils literal"><span class="pre">strip()</span></code></a>.</p>
-<p>However, if the method modifies the string, such as <a class="reference internal" href="../api/text.html#estnltk.text.Text.strip" title="estnltk.text.Text.strip"><code class="xref py py-meth docutils literal"><span class="pre">strip()</span></code></a>, the method returns a new <a class="reference internal" href="../api/text.html#estnltk.text.Text" title="estnltk.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a>
+<code class="xref py py-meth docutils literal"><span class="pre">capitalize()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">count()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">endswith()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">find()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">index()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">isalnum()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">isalpha()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">isdigit()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">islower()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">isspace()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">istitle()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">isupper()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">lower()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">lstrip()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">replace()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">rfind()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">rindex()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">rstrip()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">startswith()</span></code>,
+<code class="xref py py-meth docutils literal"><span class="pre">strip()</span></code>.</p>
+<p>However, if the method modifies the string, such as <code class="xref py py-meth docutils literal"><span class="pre">strip()</span></code>, the method returns a new <a class="reference internal" href="../api/text.html#estnltk.text.Text" title="estnltk.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a>
 instance, invalidating all computed attributes such as the start and end positions as a result of tokenization. These
 attributes won&#8217;t be copied to the resulting string. However, all the original keyword arguments are passed to the new copy.
 It is recommended to use these methods in case the text does not have any layers.</p>
@@ -1107,6 +1107,7 @@ Thus, instead a copy is made of the element, the attributes are updated, and the
 <div class="section" id="temporal-expression-timex-tagging">
 <h2>Temporal expression (TIMEX) tagging<a class="headerlink" href="#temporal-expression-timex-tagging" title="Permalink to this headline">¶</a></h2>
 <p>Temporal expressions tagger identifies temporal expressions (timexes) in text and normalizes these expressions, providing corresponding calendrical dates and times.
+The current version of the temporal expressions tagger is tuned for processing news texts (the quality of the analysis may be suboptimal in other domains).
 The program outputs an annotation in a format similar to TimeML&#8217;s TIMEX3 (more detailed description can be found in <a class="reference external" href="https://github.com/soras/EstTimeMLCorpus/blob/master/docs-et/ajav2ljendite_m2rgendamine_06.pdf?raw=true">annotation guidelines</a>, which are currently only in Estonian).</p>
 <p>The <a class="reference internal" href="../api/text.html#estnltk.text.Text" title="estnltk.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> class has property <a class="reference internal" href="../api/text.html#estnltk.text.Text.timexes" title="estnltk.text.Text.timexes"><code class="xref py py-attr docutils literal"><span class="pre">timexes</span></code></a>, which returns a list of time expressions found in the text:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">Text</span>
@@ -1168,7 +1169,7 @@ The program outputs an annotation in a format similar to TimeML&#8217;s TIMEX3 (
 <dt><strong>type</strong> - according to TimeML, four types of temporal expressions are distinguished:</dt>
 <dd><ul class="first last simple">
 <li><em>DATE expressions</em>, e.g. <em>järgmisel kolmapäeval</em> (<em>on next Wednesday</em>)</li>
-<li><em>TIME expressions</em>, e.g. <em>kell 18.00</em> (<em>at 18.00 o’clock</em>)</li>
+<li><em>TIME expressions</em>, e.g. <em>kell 18.00</em> (<em>at 18 o’clock</em>)</li>
 <li><em>DURATIONs</em>, e.g. <em>viis päeva</em> (<em>five days</em>)</li>
 <li><em>SETs of times</em>, e.g. <em>igal aastal</em> (<em>on every year</em>)</li>
 </ul>
@@ -1256,7 +1257,7 @@ Format (4) is used is used in time span expressions.</p>
 </ol>
 <div class="section" id="document-creation-date">
 <h3>Document creation date<a class="headerlink" href="#document-creation-date" title="Permalink to this headline">¶</a></h3>
-<p>Relatime temporal expressions often depend on document creation date, which can be supplied as <code class="docutils literal"><span class="pre">creation_date</span></code> parameter.
+<p>Relative temporal expressions often depend on document creation date, which can be supplied as <code class="docutils literal"><span class="pre">creation_date</span></code> parameter.
 If no <code class="docutils literal"><span class="pre">creation_date</span></code> argument is passed, it is set as the date the code is run (June 8 2015 in the example):</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">Text</span>
 <span class="n">Text</span><span class="p">(</span><span class="s">&#39;Täna on ilus ilm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">timexes</span>
@@ -1291,7 +1292,7 @@ If no <code class="docutils literal"><span class="pre">creation_date</span></cod
 </div>
 <div class="section" id="timex-examples">
 <h3>TIMEX examples<a class="headerlink" href="#timex-examples" title="Permalink to this headline">¶</a></h3>
-<p>Here are some example of time expressions and fields that Estnltk can extract.
+<p>Here are some example of time expressions and fields that the tagger can extract.
 The document creation date is fixed to Dec 21 1986 in the examples below.
 See <a class="reference external" href="https://github.com/soras/EstTimeMLCorpus/blob/master/docs-et/ajav2ljendite_m2rgendamine_06.pdf?raw=true">annotation guidelines</a> for more detailed explanations.</p>
 <table border="1" class="docutils">
@@ -1653,6 +1654,8 @@ See <a class="reference external" href="https://github.com/soras/EstTimeMLCorpus
 </div>
 <div class="section" id="tagging-clauses">
 <h2>Tagging clauses<a class="headerlink" href="#tagging-clauses" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-usage">
+<h3>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h3>
 <p>A simple sentence, also called an independent clause, typically contains a finite verb, and expresses a complete thought.
 However, natural language sentences can also be long and complex, consisting of two or more clauses joined together.
 The clause structure can be made even more complex due to embedded clauses, which divide their parent clauses into two halves:</p>
@@ -1661,7 +1664,7 @@ The clause structure can be made even more complex due to embedded clauses, whic
 <span class="n">text</span><span class="o">.</span><span class="n">get</span><span class="o">.</span><span class="n">word_texts</span><span class="o">.</span><span class="n">clause_indices</span><span class="o">.</span><span class="n">clause_annotations</span><span class="o">.</span><span class="n">as_dataframe</span>
 </pre></div>
 </div>
-<p>The clause annotations defien embedded clauses and clause boundaries.
+<p>The clause annotations define embedded clauses and clause boundaries.
 Additionally, each word in a sentence is associated with a clause index:</p>
 <div class="highlight-python"><div class="highlight"><pre>   word_texts  clause_indices     clause_annotations
 0        Mees               0                   None
@@ -1735,15 +1738,39 @@ teretas meid.
 </pre></div>
 </div>
 </div>
+<div class="section" id="the-ignore-missing-commas-mode">
+<h3>The &#8216;ignore_missing_commas&#8217; mode<a class="headerlink" href="#the-ignore-missing-commas-mode" title="Permalink to this headline">¶</a></h3>
+<p>Because commas are important clause delimiters in Estonian, the quality of the clause segmentation may suffer due to accidentially missing commas in the input text. To address this issue, the clause segmenter can be initialized in a mode in which the program tries to be less sensitive to missing commas while detecting clause boundaries.</p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">ClauseSegmenter</span>
+<span class="kn">from</span> <span class="nn">estnltk</span> <span class="kn">import</span> <span class="n">Text</span>
+
+<span class="n">segmenter</span> <span class="o">=</span> <span class="n">ClauseSegmenter</span><span class="p">(</span> <span class="n">ignore_missing_commas</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s">&#39;Keegi teine ka siin ju kirjutas et ütles et saab ise asjadele järgi minna aga vastust seepeale ei tulnudki.&#39;</span><span class="p">,</span> <span class="n">clause_segmenter</span> <span class="o">=</span> <span class="n">segmenter</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">clause</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split_by</span><span class="p">(</span><span class="s">&#39;clauses&#39;</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">clause</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>will produce following output:</p>
+<div class="highlight-python"><div class="highlight"><pre>Keegi teine ka siin ju kirjutas
+et ütles
+et saab ise asjadele järgi minna
+aga vastust seepeale ei tulnudki.
+</pre></div>
+</div>
+<p>Note that this mode is experimental and compared to the basic mode, it may introduce additional incorrect clause boundaries, although it also improves clause boundary detection in texts with (a lot of) missing commas.</p>
+</div>
+</div>
 <div class="section" id="verb-chain-tagging">
 <h2>Verb chain tagging<a class="headerlink" href="#verb-chain-tagging" title="Permalink to this headline">¶</a></h2>
 <p>Verb chain tagger identifies multiword verb units from text.
 The current version of the program aims to detect following verb chain constructions:</p>
 <ul class="simple">
 <li>basic main verbs:<ul>
-<li>negated main verbs: <em>ei/ära/pole/ega</em> + verb (e.g. Helistasin korraks Carmenile, kuid ta <strong>ei vastanud.</strong>);</li>
-<li>(affirmative) single <em>olema</em> main verbs (e.g. Raha <strong>on</strong> alati vähe) and two word <em>olema</em> verb chains (<strong>Oleme</strong> sellist kino ennegi <strong>näinud</strong>);</li>
 <li>(affirmative) single non-<em>olema</em> main verbs (example: Pidevalt <strong>uurivad</strong> asjade seisu ka hollandlased);</li>
+<li>(affirmative) single <em>olema</em> main verbs (e.g. Raha <strong>on</strong> alati vähe) and two word <em>olema</em> verb chains (<strong>Oleme</strong> sellist kino ennegi <strong>näinud</strong>);</li>
+<li>negated main verbs: <em>ei/ära/pole/ega</em> + verb (e.g. Helistasin korraks Carmenile, kuid ta <strong>ei vastanud.</strong>);</li>
 </ul>
 </li>
 <li>verb chain extensions:<ul>
@@ -1790,14 +1817,14 @@ The current version of the program aims to detect following verb chain construct
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">analysis_ids</span></code> - the indices of analysis ids of the words in the phrase of this chain.</li>
 <li><code class="docutils literal"><span class="pre">clause_index</span></code> - the clause id this chain was tagged in.</li>
-<li><code class="docutils literal"><span class="pre">mood</span></code>  - mood of the finite verb. Possible values: <em>&#8216;indic&#8217;</em> (indicative), <em>&#8216;imper&#8217;</em> (imperative), <em>&#8216;condit&#8217;</em> (conditional), <em>&#8216;quotat&#8217;</em> (quotative) või <em>&#8216;??&#8217;</em> (undetermined);</li>
+<li><code class="docutils literal"><span class="pre">mood</span></code>  - mood of the finite verb. Possible values: <em>&#8216;indic&#8217;</em> (indicative), <em>&#8216;imper&#8217;</em> (imperative), <em>&#8216;condit&#8217;</em> (conditional), <em>&#8216;quotat&#8217;</em> (quotative) or <em>&#8216;??&#8217;</em> (undetermined);</li>
 <li><code class="docutils literal"><span class="pre">morph</span></code> - for each word in the chain, lists its morphological features: part of speech tag and form (in one string, separated by &#8216;_&#8217;, and multiple variants of the pos/form are separated by &#8216;/&#8217;);</li>
 <li><code class="docutils literal"><span class="pre">other_verbs</span></code> - boolean, marks whether there are other verbs in the context, which can be potentially added to the verb chain; if <code class="docutils literal"><span class="pre">True</span></code>,then it is uncertain whether the chain is complete or not;</li>
 <li><code class="docutils literal"><span class="pre">pattern</span></code> - the general pattern of the chain: for each word in the chain, lists whether it is <em>&#8216;ega&#8217;</em>, <em>&#8216;ei&#8217;</em>, <em>&#8216;ära&#8217;</em>, <em>&#8216;pole&#8217;</em>, <em>&#8216;ole&#8217;</em>, <em>&#8216;&amp;&#8217;</em> (conjunction: ja/ning/ega/või), <em>&#8216;verb&#8217;</em> (verb different than <em>&#8216;ole&#8217;</em>) or <em>&#8216;nom/adv&#8217;</em> (nominal/adverb);</li>
 <li><code class="docutils literal"><span class="pre">phrase</span></code> - the word indices of the sentence that make up the verb chain phrase.</li>
 <li><code class="docutils literal"><span class="pre">pol</span></code> - grammatical polarity of the finite verb. Possible values: <em>&#8216;POS&#8217;</em>, <em>&#8216;NEG&#8217;</em> or <em>&#8216;??&#8217;</em>. <em>&#8216;NEG&#8217;</em> means that the chain begins with a negation word <em>ei/pole/ega/ära</em>; <em>&#8216;??&#8217;</em> is reserved for cases where it is uncertain whether <em>ära</em> forms a negated verb chain or not;</li>
 <li><code class="docutils literal"><span class="pre">roots</span></code> - for each word in the chain, lists its corresponding &#8216;root&#8217; value from the morphological analysis;</li>
-<li><code class="docutils literal"><span class="pre">tense</span></code> - tense of the finite verb. Possible values depend on the mood value. Tenses of indicative: <em>&#8216;present&#8217;</em>, <em>&#8216;imperfect&#8217;</em>, <em>&#8216;perfect&#8217;</em>, <em>&#8216;pluperfect&#8217;</em>; tense of imperative: <em>&#8216;present&#8217;</em>; tenses of conditional and quotative: <em>&#8216;present&#8217;</em> ja <em>&#8216;past&#8217;</em>. Additionally, the tense may remain undetermined (<em>&#8216;??&#8217;</em>).</li>
+<li><code class="docutils literal"><span class="pre">tense</span></code> - tense of the finite verb. Possible values depend on the mood value. Tenses of indicative: <em>&#8216;present&#8217;</em>, <em>&#8216;imperfect&#8217;</em>, <em>&#8216;perfect&#8217;</em>, <em>&#8216;pluperfect&#8217;</em>; tense of imperative: <em>&#8216;present&#8217;</em>; tenses of conditional and quotative: <em>&#8216;present&#8217;</em> and <em>&#8216;past&#8217;</em>. Additionally, the tense may remain undetermined (<em>&#8216;??&#8217;</em>).</li>
 <li><code class="docutils literal"><span class="pre">voice</span></code> - voice of the finite verb. Possible values: <em>&#8216;personal&#8217;</em>, <em>&#8216;impersonal&#8217;</em>, <em>&#8216;??&#8217;</em> (undetermined).</li>
 </ul>
 <p>Note that the words in the verb chain are ordered by the order of the grammatical relations (the order which may not coincide with the word order in text).
@@ -2020,7 +2047,11 @@ For calculating similarity, we provide path, Leacock-Chodorow and Wu-Palmer simi
 <li><a class="reference internal" href="#timex-examples">TIMEX examples</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#tagging-clauses">Tagging clauses</a></li>
+<li><a class="reference internal" href="#tagging-clauses">Tagging clauses</a><ul>
+<li><a class="reference internal" href="#basic-usage">Basic usage</a></li>
+<li><a class="reference internal" href="#the-ignore-missing-commas-mode">The &#8216;ignore_missing_commas&#8217; mode</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#verb-chain-tagging">Verb chain tagging</a></li>
 <li><a class="reference internal" href="#estonian-wordnet">Estonian wordnet</a><ul>
 <li><a class="reference internal" href="#wordnet-api">Wordnet API</a></li>

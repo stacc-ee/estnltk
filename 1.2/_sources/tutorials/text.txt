@@ -1120,6 +1120,7 @@ Temporal expression (TIMEX) tagging
 ===================================
 
 Temporal expressions tagger identifies temporal expressions (timexes) in text and normalizes these expressions, providing corresponding calendrical dates and times.
+The current version of the temporal expressions tagger is tuned for processing news texts (the quality of the analysis may be suboptimal in other domains).
 The program outputs an annotation in a format similar to TimeML's TIMEX3 (more detailed description can be found in `annotation guidelines`_, which are currently only in Estonian).
 
 .. _annotation guidelines: https://github.com/soras/EstTimeMLCorpus/blob/master/docs-et/ajav2ljendite_m2rgendamine_06.pdf?raw=true
@@ -1180,7 +1181,7 @@ There are a number of mandatory attributes present in the dictionaries:
 * **temporal_function** - *true*, if the expression is relative and exact date has to be computed from anchor points.
 * **type** - according to TimeML, four types of temporal expressions are distinguished:
     * *DATE expressions*, e.g. *järgmisel kolmapäeval* (*on next Wednesday*)
-    * *TIME expressions*, e.g. *kell 18.00* (*at 18.00 o’clock*)
+    * *TIME expressions*, e.g. *kell 18.00* (*at 18 o’clock*)
     * *DURATIONs*, e.g. *viis päeva* (*five days*)
     * *SETs of times*, e.g. *igal aastal* (*on every year*)
 
@@ -1230,7 +1231,7 @@ In addition, there are dedicated markers for special time notions:
 Document creation date
 ----------------------
 
-Relatime temporal expressions often depend on document creation date, which can be supplied as ``creation_date`` parameter.
+Relative temporal expressions often depend on document creation date, which can be supplied as ``creation_date`` parameter.
 If no ``creation_date`` argument is passed, it is set as the date the code is run (June 8 2015 in the example)::
 
     from estnltk import Text
@@ -1267,7 +1268,7 @@ We see that word "today" (*täna*) refers to to December 21 1986::
 TIMEX examples
 --------------
 
-Here are some example of time expressions and fields that Estnltk can extract.
+Here are some example of time expressions and fields that the tagger can extract.
 The document creation date is fixed to Dec 21 1986 in the examples below.
 See `annotation guidelines`_ for more detailed explanations.
 
@@ -1335,6 +1336,9 @@ aastate pärast                                                            aasta
 Tagging clauses
 ===============
 
+Basic usage
+--------------
+
 A simple sentence, also called an independent clause, typically contains a finite verb, and expresses a complete thought.
 However, natural language sentences can also be long and complex, consisting of two or more clauses joined together.
 The clause structure can be made even more complex due to embedded clauses, which divide their parent clauses into two halves::
@@ -1343,7 +1347,7 @@ The clause structure can be made even more complex due to embedded clauses, whic
     text = Text('Mees, keda seal kohtasime, oli tuttav ja teretas meid.')
     text.get.word_texts.clause_indices.clause_annotations.as_dataframe
 
-The clause annotations defien embedded clauses and clause boundaries.
+The clause annotations define embedded clauses and clause boundaries.
 Additionally, each word in a sentence is associated with a clause index::
 
        word_texts  clause_indices     clause_annotations
@@ -1421,6 +1425,30 @@ It might be useful to process each clause of the sentence independently::
     , keda seal kohtasime,
     teretas meid.
 
+The 'ignore_missing_commas' mode
+----------------------------------
+
+Because commas are important clause delimiters in Estonian, the quality of the clause segmentation may suffer due to accidentially missing commas in the input text. To address this issue, the clause segmenter can be initialized in a mode in which the program tries to be less sensitive to missing commas while detecting clause boundaries.
+
+Example::
+
+    from estnltk import ClauseSegmenter
+    from estnltk import Text
+    
+    segmenter = ClauseSegmenter( ignore_missing_commas=True )
+    text = Text('Keegi teine ka siin ju kirjutas et ütles et saab ise asjadele järgi minna aga vastust seepeale ei tulnudki.', clause_segmenter = segmenter)
+    
+    for clause in text.split_by('clauses'):
+        print (clause.text)
+    
+will produce following output::
+
+    Keegi teine ka siin ju kirjutas
+    et ütles
+    et saab ise asjadele järgi minna
+    aga vastust seepeale ei tulnudki.
+    
+Note that this mode is experimental and compared to the basic mode, it may introduce additional incorrect clause boundaries, although it also improves clause boundary detection in texts with (a lot of) missing commas.
 
 
 Verb chain tagging
@@ -1431,9 +1459,9 @@ The current version of the program aims to detect following verb chain construct
 
 * basic main verbs:
 
-  * negated main verbs: *ei/ära/pole/ega* + verb (e.g. Helistasin korraks Carmenile, kuid ta **ei vastanud.**);
-  * (affirmative) single *olema* main verbs (e.g. Raha **on** alati vähe) and two word *olema* verb chains (**Oleme** sellist kino ennegi **näinud**);
   * (affirmative) single non-*olema* main verbs (example: Pidevalt **uurivad** asjade seisu ka hollandlased);
+  * (affirmative) single *olema* main verbs (e.g. Raha **on** alati vähe) and two word *olema* verb chains (**Oleme** sellist kino ennegi **näinud**);
+  * negated main verbs: *ei/ära/pole/ega* + verb (e.g. Helistasin korraks Carmenile, kuid ta **ei vastanud.**);
 
 * verb chain extensions:
 
@@ -1480,14 +1508,14 @@ Following is a brief description of the attributes:
 
 * ``analysis_ids`` - the indices of analysis ids of the words in the phrase of this chain.
 * ``clause_index`` - the clause id this chain was tagged in.
-* ``mood``  - mood of the finite verb. Possible values: *'indic'* (indicative), *'imper'* (imperative), *'condit'* (conditional), *'quotat'* (quotative) või *'??'* (undetermined);
+* ``mood``  - mood of the finite verb. Possible values: *'indic'* (indicative), *'imper'* (imperative), *'condit'* (conditional), *'quotat'* (quotative) or *'??'* (undetermined);
 * ``morph`` - for each word in the chain, lists its morphological features: part of speech tag and form (in one string, separated by '_', and multiple variants of the pos/form are separated by '/');
 * ``other_verbs`` - boolean, marks whether there are other verbs in the context, which can be potentially added to the verb chain; if ``True``,then it is uncertain whether the chain is complete or not;
 * ``pattern`` - the general pattern of the chain: for each word in the chain, lists whether it is *'ega'*, *'ei'*, *'ära'*, *'pole'*, *'ole'*, *'&'* (conjunction: ja/ning/ega/või), *'verb'* (verb different than *'ole'*) or *'nom/adv'* (nominal/adverb);
 * ``phrase`` - the word indices of the sentence that make up the verb chain phrase.
 * ``pol`` - grammatical polarity of the finite verb. Possible values: *'POS'*, *'NEG'* or *'??'*. *'NEG'* means that the chain begins with a negation word *ei/pole/ega/ära*; *'??'* is reserved for cases where it is uncertain whether *ära* forms a negated verb chain or not;
 * ``roots`` - for each word in the chain, lists its corresponding 'root' value from the morphological analysis;
-* ``tense`` - tense of the finite verb. Possible values depend on the mood value. Tenses of indicative: *'present'*, *'imperfect'*, *'perfect'*, *'pluperfect'*; tense of imperative: *'present'*; tenses of conditional and quotative: *'present'* ja *'past'*. Additionally, the tense may remain undetermined (*'??'*).
+* ``tense`` - tense of the finite verb. Possible values depend on the mood value. Tenses of indicative: *'present'*, *'imperfect'*, *'perfect'*, *'pluperfect'*; tense of imperative: *'present'*; tenses of conditional and quotative: *'present'* and *'past'*. Additionally, the tense may remain undetermined (*'??'*).
 * ``voice`` - voice of the finite verb. Possible values: *'personal'*, *'impersonal'*, *'??'* (undetermined).
 
 Note that the words in the verb chain are ordered by the order of the grammatical relations (the order which may not coincide with the word order in text).

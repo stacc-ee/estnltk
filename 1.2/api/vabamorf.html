@@ -25,7 +25,8 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="estnltk 1.2 documentation" href="../index.html" />
-    <link rel="prev" title="estnltk.textcleaner module" href="textcleaner.html" /> 
+    <link rel="next" title="estnltk.wordnet_tagger module" href="wordnet_tagger.html" />
+    <link rel="prev" title="estnltk.timex module" href="timex.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -38,7 +39,10 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="textcleaner.html" title="estnltk.textcleaner module"
+          <a href="wordnet_tagger.html" title="estnltk.wordnet_tagger module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="timex.html" title="estnltk.timex module"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">estnltk 1.2 documentation</a> &raquo;</li> 
       </ul>
@@ -153,6 +157,30 @@ default behaviour of string.split() function.</p>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">list of (list of dict)</p>
 <blockquote class="last">
 <div><p>List of analysis for each word in input.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="estnltk.vabamorf.morf.Vabamorf.disambiguate">
+<code class="descname">disambiguate</code><span class="sig-paren">(</span><em>words</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/estnltk/vabamorf/morf.html#Vabamorf.disambiguate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.vabamorf.morf.Vabamorf.disambiguate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disambiguate previously analyzed words.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>words: list of dict</strong></p>
+<blockquote>
+<div><p>A sentence of words.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">list of dict</p>
+<blockquote class="last">
+<div><p>Sentence of disambiguated words.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -348,6 +376,30 @@ SWIG wrapper.</p>
 <code class="descclassname">estnltk.vabamorf.morf.</code><code class="descname">deconvert</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/estnltk/vabamorf/morf.html#deconvert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.vabamorf.morf.deconvert" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method converts back the output from wrapper.
 Result should be <cite>unicode</cite> for Python2 and <cite>str</cite> for Python3</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="estnltk.vabamorf.morf.disambiguate">
+<code class="descclassname">estnltk.vabamorf.morf.</code><code class="descname">disambiguate</code><span class="sig-paren">(</span><em>words</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/estnltk/vabamorf/morf.html#disambiguate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#estnltk.vabamorf.morf.disambiguate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disambiguate previously analyzed words.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>words: list of dict</strong></p>
+<blockquote>
+<div><p>A sentence of words.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">list of dict</p>
+<blockquote class="last">
+<div><p>Sentence of disambiguated words.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -689,6 +741,30 @@ default behaviour of string.split() function.</p>
 
 <dl class="method">
 <dt>
+<code class="descname">disambiguate</code><span class="sig-paren">(</span><em>words</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/estnltk/vabamorf/morf.html#Vabamorf.disambiguate"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Disambiguate previously analyzed words.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>words: list of dict</strong></p>
+<blockquote>
+<div><p>A sentence of words.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">list of dict</p>
+<blockquote class="last">
+<div><p>Sentence of disambiguated words.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
 <code class="descname">fix_spelling</code><span class="sig-paren">(</span><em>words</em>, <em>join=True</em>, <em>joinstring=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/estnltk/vabamorf/morf.html#Vabamorf.fix_spelling"><span class="viewcode-link">[source]</span></a></dt>
 <dd><p>Simple function for quickly correcting misspelled words.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -835,8 +911,11 @@ token sequences such as &#8220;New York&#8221;.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="textcleaner.html"
-                        title="previous chapter">estnltk.textcleaner module</a></p>
+  <p class="topless"><a href="timex.html"
+                        title="previous chapter">estnltk.timex module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="wordnet_tagger.html"
+                        title="next chapter">estnltk.wordnet_tagger module</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -871,7 +950,10 @@ token sequences such as &#8220;New York&#8221;.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="textcleaner.html" title="estnltk.textcleaner module"
+          <a href="wordnet_tagger.html" title="estnltk.wordnet_tagger module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="timex.html" title="estnltk.timex module"
              >previous</a> |</li>
         <li><a href="../index.html">estnltk 1.2 documentation</a> &raquo;</li> 
       </ul>
