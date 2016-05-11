@@ -493,7 +493,10 @@ void ETMRFA::MargistaJustkuiLauseAlgused(AHEL2 &ahel, int lauseAlgusIdx)
               //          if (TaheHulgad::PoleMuudKui((const CFSWString*)&(yle_eelmine->ptr.pMrfAnal->s6na), (const CFSWString*) &(FSxSTR("1234567890.()"))))
                             loend = 1;
                         else
+                        {
                             loend = 0;
+                            break;
+                        }
                     }
                     if (loend == 0) // eespool on (ka) midagi muud kui loendi tähis
                         continue;
